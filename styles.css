@@ -99,6 +99,9 @@ header {
 nav[aria-label="Main navigation"] ul {
 	display: flex;
 	gap: var(--spacing-md);
+	list-style: none; /* Removes default bullet points or dots */
+	margin: 0;
+	padding: 0;
 }
 
 nav[aria-label="Main navigation"] a {
@@ -121,6 +124,7 @@ nav[aria-label="Main navigation"] a {
 	font-size: var(--font-size-sm);
 }
 
+/* Secondary Navigation */
 .secondary-nav {
 	background-color: var(--color-bg-highlight);
 	white-space: nowrap;
