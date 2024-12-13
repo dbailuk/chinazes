@@ -1,0 +1,650 @@
+/* =========================
+   CSS Variables & Resets
+   ========================= */
+
+   :root {
+	/* Color Palette */
+	--color-black: #000;
+	--color-white: #fff;
+	--color-red: #c00; /* For branding, adjust if needed */
+	--color-brand-red: #d00;
+	--color-gray-light: #f2f2f2;
+	--color-gray-medium: #777;
+	--color-gray-dark: #333;
+
+	/* Adjusted colors from screenshot */
+	--color-bg-primary: #ffffff;
+	--color-bg-secondary: #000000;
+	--color-bg-highlight: #e00;
+	--color-text-primary: #333333;
+	--color-text-secondary: #666666;
+	--color-text-invert: #ffffff;
+
+	/* Typography */
+	--font-family-base: 'Open Sans', Arial, sans-serif;
+	--font-size-base: 16px;
+	--font-size-sm: 0.875rem;
+	--font-size-md: 1rem;
+	--font-size-lg: 1.25rem;
+	--font-size-xl: 2rem;
+	--font-weight-normal: 400;
+	--font-weight-bold: 700;
+
+	/* Spacing */
+	--spacing-xxs: 0.25rem;
+	--spacing-xs: 0.5rem;
+	--spacing-sm: 1rem;
+	--spacing-md: 1.5rem;
+	--spacing-lg: 2rem;
+	--spacing-xl: 3rem;
+
+	/* Layout */
+	--max-width: 1200px;
+  }
+
+  html {
+	box-sizing: border-box;
+	font-size: 100%; /* 16px */
+	scroll-behavior: smooth;
+  }
+
+  *, *::before, *::after {
+	box-sizing: inherit;
+  }
+
+  body {
+	margin: 0;
+	padding: 0;
+	font-family: var(--font-family-base);
+	font-size: var(--font-size-base);
+	color: var(--color-text-primary);
+	background-color: var(--color-bg-primary);
+	line-height: 1.5;
+  }
+
+  /* Accessibility and default focus styles */
+  :focus {
+	outline: 2px solid var(--color-brand-red);
+	outline-offset: 2px;
+  }
+
+  img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+  }
+
+  a {
+	text-decoration: none;
+	color: inherit;
+  }
+
+  ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+
+  /* =========================
+	 Layout Wrappers
+	 ========================= */
+
+  .wrapper {
+	width: 100%;
+	margin: 0 auto;
+	max-width: var(--max-width);
+	padding: 0 var(--spacing-sm);
+  }
+
+  section {
+	margin-bottom: var(--spacing-xl);
+  }
+
+  /* =========================
+	 Header & Navigation
+	 ========================= */
+
+  header {
+	background-color: var(--color-bg-secondary);
+	color: var(--color-white);
+	padding: var(--spacing-sm) 0;
+  }
+
+  header .wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  }
+
+  /* Logo */
+  .logo img {
+	display: block;
+	max-height: 60px;
+  }
+
+  /* Primary nav */
+  nav[aria-label="Main navigation"] ul {
+	display: flex;
+	gap: var(--spacing-md);
+  }
+
+  nav[aria-label="Main navigation"] a {
+	color: var(--color-white);
+	text-transform: uppercase;
+	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-md);
+  }
+
+  nav[aria-label="Main navigation"] a:hover,
+  nav[aria-label="Main navigation"] a:focus {
+	text-decoration: underline;
+  }
+
+  /* Secondary navigation bar (e.g., trending links) */
+  .secondary-nav {
+	background-color: var(--color-bg-highlight);
+	padding: var(--spacing-xs) 0;
+  }
+
+  .secondary-nav .wrapper {
+	display: flex;
+	overflow-x: auto;
+	gap: var(--spacing-lg);
+	align-items: center;
+  }
+
+  .secondary-nav a {
+	color: var(--color-white);
+	font-weight: var(--font-weight-bold);
+	white-space: nowrap;
+	font-size: var(--font-size-sm);
+  }
+
+  /* =========================
+	 Hero / Featured Sections
+	 ========================= */
+
+  .hero {
+	text-align: center;
+	margin: var(--spacing-xl) 0;
+  }
+
+  .hero h1 {
+	font-size: var(--font-size-xl);
+	margin-bottom: var(--spacing-md);
+	font-weight: var(--font-weight-bold);
+  }
+
+  .hero p {
+	font-size: var(--font-size-md);
+	color: var(--color-gray-dark);
+  }
+
+  /* Example large featured images */
+  .featured-grid {
+	display: grid;
+	gap: var(--spacing-md);
+	margin-bottom: var(--spacing-xl);
+  }
+
+  @media (min-width: 768px) {
+	.featured-grid {
+	  grid-template-columns: 2fr 1fr;
+	}
+  }
+
+  /* =========================
+	 Content Sections
+	 ========================= */
+
+  /* "Hot Right Now" and "Top Review" heading styles */
+  .section-heading {
+	font-size: var(--font-size-xl);
+	font-weight: var(--font-weight-bold);
+	margin-bottom: var(--spacing-md);
+	color: var(--color-gray-dark);
+  }
+
+  /* Grid layout for articles */
+  .content-grid {
+	display: grid;
+	gap: var(--spacing-md);
+	margin-bottom: var(--spacing-xl);
+	grid-template-columns: 1fr;
+
+	/* At least 8 elements inside, some spanning multiple cells */
+  }
+
+  @media (min-width: 768px) {
+	.content-grid {
+	  grid-template-columns: repeat(2, 1fr);
+	}
+  }
+
+  @media (min-width: 1024px) {
+	.content-grid {
+	  grid-template-columns: repeat(4, 1fr);
+	}
+  }
+
+  /* Articles inside the grid */
+  article {
+	border: 1px solid var(--color-gray-light);
+	padding: var(--spacing-sm);
+	display: flex;
+	flex-direction: column;
+  }
+
+  article h2 {
+	font-size: var(--font-size-lg);
+	margin-bottom: var(--spacing-sm);
+  }
+
+  article p {
+	font-size: var(--font-size-md);
+	margin-bottom: var(--spacing-sm);
+	color: var(--color-gray-dark);
+  }
+
+  article a {
+	color: var(--color-black);
+	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-sm);
+  }
+
+  article a:hover {
+	text-decoration: underline;
+  }
+
+  /* Aside (sidebar) */
+  aside {
+	border: 1px solid var(--color-gray-light);
+	padding: var(--spacing-sm);
+	background-color: var(--color-gray-light);
+  }
+
+  aside h3 {
+	font-size: var(--font-size-lg);
+	margin-bottom: var(--spacing-sm);
+  }
+
+  aside p {
+	color: var(--color-black);
+  }
+
+  aside ul li {
+	margin-bottom: var(--spacing-xs);
+	font-size: var(--font-size-sm);
+  }
+
+  /* Example for elements spanning multiple grid cells */
+  .content-grid .wide-span {
+	grid-column: span 2;
+  }
+
+  /* =========================
+	 Additional Sections Based on Screenshot
+	 ========================= */
+
+  /* "Our Latest Reviews" section */
+  .latest-reviews {
+	margin-bottom: var(--spacing-xl);
+  }
+
+  .latest-reviews h2 {
+	font-size: var(--font-size-xl);
+	font-weight: var(--font-weight-bold);
+	margin-bottom: var(--spacing-md);
+  }
+
+  .review-grid {
+	display: grid;
+	gap: var(--spacing-md);
+	grid-template-columns: 1fr;
+	margin-bottom: var(--spacing-lg);
+  }
+
+  @media (min-width: 768px) {
+	.review-grid {
+	  grid-template-columns: repeat(3, 1fr);
+	}
+  }
+
+  @media (min-width: 1024px) {
+	.review-grid {
+	  grid-template-columns: repeat(6, 1fr);
+	}
+  }
+
+  .review-grid article {
+	position: relative;
+	overflow: hidden;
+  }
+
+  .review-grid article img {
+	width: 100%;
+	display: block;
+  }
+
+  .review-grid article p {
+	position: absolute;
+	bottom: var(--spacing-sm);
+	left: var(--spacing-sm);
+	color: var(--color-white);
+	font-weight: var(--font-weight-bold);
+	text-shadow: 1px 1px var(--color-black);
+  }
+
+  .review-badge {
+	position: absolute;
+	bottom: var(--spacing-sm);
+	right: var(--spacing-sm);
+	background-color: var(--color-red);
+	color: var(--color-white);
+	font-size: var(--font-size-md);
+	font-weight: var(--font-weight-bold);
+	padding: var(--spacing-xxs) var(--spacing-xs);
+	border-radius: 4px;
+  }
+
+  /* "Just Released" sidebar section (example) */
+  .just-released {
+	margin-top: var(--spacing-xl);
+  }
+
+  .just-released h2 {
+	font-size: var(--font-size-xl);
+	margin-bottom: var(--spacing-md);
+  }
+
+  .release-list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+  }
+
+  /* Cards for new releases */
+  .release-card {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-sm);
+  }
+
+  .release-card img {
+	width: 60px;
+	height: 60px;
+	object-fit: cover;
+  }
+
+  .release-card-details {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex: 1;
+  }
+
+  .release-card-details h3 {
+	font-size: var(--font-size-md);
+	margin-bottom: var(--spacing-xxs);
+  }
+
+  .release-card-details p {
+	font-size: var(--font-size-sm);
+	color: var(--color-gray-medium);
+  }
+
+  /* Platforms badges */
+  .platform-badges {
+	display: flex;
+	gap: var(--spacing-xxs);
+  }
+
+  .platform-badge {
+	background-color: var(--color-black);
+	color: var(--color-white);
+	font-size: var(--font-size-sm);
+	padding: var(--spacing-xxs) var(--spacing-xs);
+	border-radius: 2px;
+  }
+
+  /* Tabs (Popular, Recent, Monthly Top) */
+  .tabs {
+	display: flex;
+	gap: var(--spacing-sm);
+	margin-bottom: var(--spacing-xs);
+  }
+
+  .tabs button {
+	background-color: var(--color-red);
+	color: var(--color-white);
+	border: none;
+	padding: var(--spacing-xs) var(--spacing-md);
+	cursor: pointer;
+	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-sm);
+	border-radius: 2px;
+  }
+
+  .tabs button:hover {
+	opacity: 0.9;
+  }
+
+  /* Divider line */
+  .divider {
+	width: 100%;
+	height: 1px;
+	background-color: var(--color-gray-medium);
+	margin: var(--spacing-md) 0;
+  }
+
+  /* Article listings next to images */
+  .article-listing {
+	display: flex;
+	gap: var(--spacing-md);
+	margin-bottom: var(--spacing-md);
+  }
+
+  .article-listing img {
+	width: 120px;
+	height: 80px;
+	object-fit: cover;
+	flex-shrink: 0;
+  }
+
+  .article-listing-content {
+	flex: 1;
+  }
+
+  .article-listing-content h4 {
+	font-size: var(--font-size-md);
+	font-weight: var(--font-weight-bold);
+	margin-bottom: var(--spacing-xxs);
+  }
+
+  .article-listing-content p {
+	color: var(--color-gray-dark);
+	font-size: var(--font-size-sm);
+	margin-bottom: var(--spacing-xxs);
+  }
+
+  /* Metadata (e.g. "Written by Steve Jobs", "Published 2 days ago") */
+  .article-metadata {
+	display: flex;
+	justify-content: space-between;
+	font-size: var(--font-size-sm);
+	color: var(--color-gray-medium);
+  }
+
+  /* Newsletter Signup Section */
+  .newsletter-section {
+	background-color: var(--color-bg-secondary);
+	color: var(--color-white);
+	padding: var(--spacing-lg) var(--spacing-sm);
+	text-align: center;
+	margin-top: var(--spacing-xl);
+  }
+
+  .newsletter-section h2 {
+	font-size: var(--font-size-xl);
+	margin-bottom: var(--spacing-sm);
+  }
+
+  .newsletter-section p {
+	font-size: var(--font-size-md);
+	margin-bottom: var(--spacing-md);
+  }
+
+  .newsletter-form {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-sm);
+	max-width: 500px;
+	margin: 0 auto;
+  }
+
+  .newsletter-form input[type="email"] {
+	padding: var(--spacing-sm);
+	border: none;
+	font-size: var(--font-size-md);
+  }
+
+  .newsletter-form button {
+	background-color: var(--color-red);
+	color: var(--color-white);
+	border: none;
+	padding: var(--spacing-sm);
+	font-size: var(--font-size-md);
+	font-weight: var(--font-weight-bold);
+	cursor: pointer;
+  }
+
+  .newsletter-form button:hover {
+	background-color: var(--color-brand-red);
+  }
+
+  /* Terms note */
+  .newsletter-note {
+	font-size: var(--font-size-sm);
+	margin-top: var(--spacing-sm);
+	color: var(--color-text-secondary);
+  }
+
+  /* =========================
+	 Footer
+	 ========================= */
+
+  footer {
+	background-color: var(--color-red);
+	color: var(--color-white);
+	padding: var(--spacing-md) 0;
+  }
+
+  footer .wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-sm);
+	text-align: center;
+  }
+
+  footer nav[aria-label="Footer navigation"] ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--spacing-md);
+  }
+
+  footer nav[aria-label="Footer navigation"] a {
+	color: var(--color-white);
+	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-sm);
+  }
+
+  footer .social-links {
+	display: flex;
+	gap: var(--spacing-sm);
+	margin: var(--spacing-sm) 0;
+  }
+
+  footer .social-links a {
+	color: var(--color-white);
+	font-size: var(--font-size-md);
+  }
+
+  footer p {
+	font-size: var(--font-size-sm);
+	color: var(--color-white);
+  }
+
+  /* =========================
+	 Responsive Adjustments
+	 ========================= */
+
+  /* Mobile-first design: We already started mobile-first,
+	 now adding adjustments for larger screens. */
+
+  @media (min-width: 480px) {
+	/* Adjust font sizes slightly */
+	html {
+	  font-size: 17px;
+	}
+  }
+
+  @media (min-width: 768px) {
+	.hero h1 {
+	  font-size: 2.5rem;
+	}
+
+	.newsletter-section h2 {
+	  font-size: 2.5rem;
+	}
+
+	.content-grid, .review-grid {
+	  gap: var(--spacing-lg);
+	}
+  }
+
+  @media (min-width: 1024px) {
+	.hero h1 {
+	  font-size: 3rem;
+	}
+
+	nav[aria-label="Main navigation"] a {
+	  font-size: var(--font-size-md);
+	}
+
+	.newsletter-section h2 {
+	  font-size: 3rem;
+	}
+  }
+
+  /* =========================
+	 Additional Utility Classes
+	 ========================= */
+
+  .text-center {
+	text-align: center;
+  }
+
+  .m-b-sm {
+	margin-bottom: var(--spacing-sm) !important;
+  }
+
+  .m-b-md {
+	margin-bottom: var(--spacing-md) !important;
+  }
+
+  .m-b-lg {
+	margin-bottom: var(--spacing-lg) !important;
+  }
+
+  .p-sm {
+	padding: var(--spacing-sm) !important;
+  }
+
+  .hidden {
+	display: none !important;
+  }
+
+  /* =========================
+	 End of CSS
+	 ========================= */
