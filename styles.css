@@ -9,13 +9,14 @@
 
 	--color-bg-primary: #fff;
 	--color-bg-secondary: #000;
-	--color-bg-highlight: #d0021b; /* bright red bar */
+	--color-bg-highlight: #d0021b;
 	--color-text-primary: #333;
 	--color-text-secondary: #666;
 	--color-text-invert: #fff;
 
 	--font-family-base: Arial, sans-serif;
 	--font-size-base: 16px;
+	--font-size-xxs: 0.75rem; /* Added this line */
 	--font-size-sm: 0.875rem;
 	--font-size-md: 1rem;
 	--font-size-lg: 1.25rem;
@@ -32,6 +33,7 @@
 
 	--max-width: 1200px;
 }
+
 
 html {
 	box-sizing: border-box;
@@ -345,12 +347,10 @@ nav[aria-label="Main navigation"] a {
 .article-metadata {
 	display: flex;
 	justify-content: space-between;
-	font-size: var(--font-size-xxs);
 	color: var(--color-gray-medium);
 	font-size: var(--font-size-sm);
 }
 
-/* Just Released Aside */
 .just-released-section {
 	display: grid;
 	gap: var(--spacing-md);
@@ -405,7 +405,6 @@ nav[aria-label="Main navigation"] a {
 .platform-badge {
 	background: var(--color-black);
 	color: var(--color-white);
-	font-size: var(--font-size-xxs);
 	padding: var(--spacing-xxs) var(--spacing-xs);
 	border-radius: 2px;
 	font-size: var(--font-size-sm);
