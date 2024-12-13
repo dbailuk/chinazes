@@ -75,6 +75,11 @@ a {
 header {
 	background-color: var(--color-bg-secondary);
 	color: var(--color-white);
+	position: fixed; /* Make the header fixed at the top */
+	top: 0; /* Position it at the very top */
+	left: 0; /* Align it to the left */
+	width: 100%; /* Ensure it spans the full width of the viewport */
+	z-index: 1000; /* Ensure it stays above other elements */
 }
 
 .top-bar {
