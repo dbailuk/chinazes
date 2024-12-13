@@ -31,7 +31,7 @@
 	--spacing-lg: 2rem;
 	--spacing-xl: 3rem;
 
-	--max-width: 1200px;
+	--max-width: 1800px;
 }
 
 html {
@@ -86,14 +86,19 @@ header {
 
 .logo {
 	display: flex;
-	align-items: center;
-	gap: var(--spacing-xs);
-	font-weight: var(--font-weight-bold);
+	align-items: flex-end;
 }
 
 .logo img {
-	height: 40px;
+	height: 60px;
 	width: auto;
+}
+
+.logo .site-name {
+	font-size: var(--font-size-md);
+	font-weight: var(--font-weight-bold);
+	color: var(--color-white);
+	margin-bottom: 0;
 }
 
 nav[aria-label="Main navigation"] ul {
