@@ -111,17 +111,43 @@ nav[aria-label="Main navigation"] a {
 	text-transform: uppercase;
 }
 
+/* Updated styles for the header icons */
 .header-icons {
 	display: flex;
 	align-items: center;
+	justify-content: flex-end; /* Aligns elements to the right */
 	gap: var(--spacing-sm);
 }
 
-.header-icons input[type="text"] {
-	padding: var(--spacing-xs);
-	border: none;
-	border-radius: 2px;
+.header-icons .search-bar {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.header-icons .search-bar input[type="text"] {
+	padding: var(--spacing-xs) var(--spacing-md);
+	border: 1px solid var(--color-gray-light);
+	border-radius: 4px;
 	font-size: var(--font-size-sm);
+}
+
+.header-icons .search-bar .icon {
+	position: absolute;
+	right: var(--spacing-xs);
+	display: flex;
+	align-items: center;
+}
+
+.header-icons .search-bar .icon img {
+	height: 16px;
+	width: 16px;
+}
+
+.header-icons a img {
+	height: 24px;
+	width: 24px;
+	display: block;
 }
 
 /* Secondary Navigation */
