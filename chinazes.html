@@ -2,77 +2,247 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>Video Game Site - Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Video game news, reviews and latest releases.">
+  <title>Video Game Site Homepage</title>
   <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Discover the latest video game news, articles, and events." />
 </head>
 <body>
-  <header>
+<header>
+  <div class="top-bar wrapper">
     <div class="logo">
-      <a href="index.html" aria-label="Homepage">
-        <img src="https://picsum.photos/100/60" alt="Site Logo" />
-      </a>
+      <img src="https://picsum.photos/100/60" alt="Site Logo" />
+      <span class="site-name">CZUgamer.cz</span>
     </div>
     <nav aria-label="Main navigation">
       <ul>
-        <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="about_us.html">About Us</a></li>
-        <li><a href="articles.html">Articles</a></li>
-        <li><a href="terms_of_use.html">Terms of Use</a></li>
-        <li><a href="privacy_policy.html">Privacy Policy</a></li>
+        <li><a href="#" aria-current="page">News</a></li>
+        <li><a href="#">Games</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Events</a></li>
       </ul>
     </nav>
-  </header>
+    <div class="header-icons">
+      <input type="text" placeholder="Search" aria-label="Search">
+      <a href="#" aria-label="User account"><img src="https://picsum.photos/30/30" alt="User icon"></a>
+    </div>
+  </div>
+  <div class="secondary-nav">
+    <div class="wrapper">
+      <a href="#" class="active">Popular</a>
+      <a href="#">Ignon Age: Veilguard</a>
+      <a href="#">Stalker 2</a>
+      <a href="#">Baldur's Gate 3</a>
+      <a href="#">The Game Awards 2024</a>
+      <a href="#">E3 2025</a>
+      <a href="#">ZZZ: Miyabi Guide</a>
+      <a href="#">Infinite Nikki</a>
+      <a href="#">Fortnite Season 16</a>
+    </div>
+  </div>
+</header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero" aria-label="Hero banner">
-      <h1>Welcome to Our Gaming World</h1>
-      <img src="https://picsum.photos/1200/400" alt="Hero background: a scene representing gaming" />
-      <p>Discover the latest games, news, reviews, and events right here.</p>
-    </section>
-
-    <!-- Featured Articles & Sidebar Section -->
-    <section class="content-grid" aria-label="Featured content">
-      <!-- Featured Article 1 -->
-      <article>
-        <h2>Latest Release: Sci-Fi Adventure</h2>
-        <img src="https://picsum.photos/400/200" alt="Cover art of the latest sci-fi game release">
-        <p>Immerse yourself in a universe of exploration and story-driven gameplay.</p>
-        <a href="article_template.html">Read more &raquo;</a>
+<main class="wrapper">
+  <!-- Hero Section -->
+  <section class="featured-section">
+    <div class="section-heading-row">
+      <h1>Hot Right Now</h1>
+      <h1>Top Review This Week</h1>
+    </div>
+    <div class="featured-grid">
+      <article class="featured-item">
+        <div class="tag">Game</div>
+        <img src="https://picsum.photos/600/400?random=1" alt="Featured game image">
+        <h2>Just Cause 4 now for FREE on Epic Games! Special offer with our code!</h2>
       </article>
-
-      <!-- Sidebar (Aside) -->
-      <aside aria-label="Sidebar with upcoming events">
-        <h3>Upcoming Events</h3>
-        <p>Don’t miss out on community play sessions and tournaments:</p>
-        <ul>
-          <li>Community Night: Fridays at 8pm</li>
-          <li>New Release Showcase: Saturdays at 2pm</li>
-        </ul>
-      </aside>
-
-      <!-- Featured Article 2 -->
-      <article>
-        <h2>Strategy Guides &amp; Tips</h2>
-        <img src="https://picsum.photos/400/200" alt="Gameplay screenshot featuring strategic elements">
-        <p>Level up your gaming skills with comprehensive guides and expert tips.</p>
-        <a href="article_template.html">Learn strategies &raquo;</a>
+      <article class="featured-item">
+        <div class="tag review">Review</div>
+        <img src="https://picsum.photos/600/400?random=2" alt="Featured review image">
+        <h2>Horizon Zero Dawn - Remastered</h2>
       </article>
+    </div>
+  </section>
 
-      <!-- Featured Article 3 -->
+  <!-- Articles Grid -->
+  <section class="content-grid">
+    <article>
+      <img src="https://picsum.photos/400/250?random=3" alt="Game image">
+      <h3>Battlefield 3 after 13 years: still online!</h3>
+      <p>Who are the players? A retrospective look at a classic FPS.</p>
+    </article>
+    <article>
+      <img src="https://picsum.photos/400/250?random=4" alt="Game image">
+      <h3>Among Us in 3D?</h3>
+      <p>We speculate on the future of the 2020 bestseller.</p>
+    </article>
+    <article>
+      <img src="https://picsum.photos/400/250?random=5" alt="Game image">
+      <h3>Can you recognize these famous locations?</h3>
+      <p>QUIZ about the most remarkable game places!</p>
+    </article>
+    <article>
+      <img src="https://picsum.photos/400/250?random=6" alt="Game image">
+      <h3>Cities Skylines - greatest city sim of all times?</h3>
+      <p>Review after years of continued development.</p>
+    </article>
+    <article>
+      <img src="https://picsum.photos/400/250?random=7" alt="Game image">
+      <h3>Asphalt 8 on Android phones</h3>
+      <p>Is it worth it? Mobile review edition.</p>
+    </article>
+    <article>
+      <img src="https://picsum.photos/400/250?random=8" alt="Game image">
+      <h3>Valve announced de_dust3!</h3>
+      <p>CS:GO2 players are concerned about changes.</p>
+    </article>
+    <article>
+      <img src="https://picsum.photos/400/250?random=9" alt="Game image">
+      <h3>Hours and hours spent racing</h3>
+      <p>Now I'm only a bus driver. Sad story of Przemek.</p>
+    </article>
+  </section>
+
+  <!-- Latest Reviews -->
+  <section class="latest-reviews">
+    <h2>Our Latest Reviews</h2>
+    <div class="review-grid">
       <article>
-        <h2>Top Game Reviews</h2>
-        <img src="https://picsum.photos/400/200" alt="Collage of popular game covers">
-        <p>Read honest, in-depth reviews from our community and find your next favorite title.</p>
-        <a href="article_template.html">Check reviews &raquo;</a>
+        <img src="https://picsum.photos/400/250?random=10" alt="EA Sports FC 25">
+        <p>EA Sports FC 25</p>
+        <div class="review-badge">7</div>
       </article>
-    </section>
-  </main>
+      <article>
+        <img src="https://picsum.photos/400/250?random=11" alt="Asphalt 8 Android">
+        <p>Asphalt 8 - mobile version, Android</p>
+        <div class="review-badge">4</div>
+      </article>
+      <article>
+        <img src="https://picsum.photos/400/250?random=12" alt="Horizon Zero Dawn">
+        <p>Horizon Zero Dawn - Remastered</p>
+        <div class="review-badge">6</div>
+      </article>
+      <article>
+        <img src="https://picsum.photos/400/250?random=13" alt="GTA VI review">
+        <p>Grand Theft Auto VI - exclusive review</p>
+        <div class="review-badge">9</div>
+      </article>
+      <article>
+        <img src="https://picsum.photos/400/250?random=14" alt="Call of Duty MWII">
+        <p>Call of Duty: Modern Warfare II</p>
+        <div class="review-badge">5</div>
+      </article>
+      <article>
+        <img src="https://picsum.photos/400/250?random=15" alt="Cities Skylines">
+        <p>Cities Skylines</p>
+        <div class="review-badge">8</div>
+      </article>
+    </div>
+  </section>
 
-  <footer aria-label="Footer">
-    <p>&copy; 2024 Video Game Site. All rights reserved.</p>
-  </footer>
+  <!-- Just Released & Article Listings -->
+  <section class="just-released-section">
+    <div class="tabs">
+      <button class="active">Popular</button>
+      <button>Recent</button>
+      <button>Monthly TOP</button>
+    </div>
+    <div class="divider"></div>
+
+    <div class="article-listing-group">
+      <div class="article-listing">
+        <img src="https://picsum.photos/120/80?random=16" alt="Game image">
+        <div class="article-listing-content">
+          <span class="category">Game</span>
+          <h4>Check your knowledge from Age of Empires 2!</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <div class="article-metadata">
+            <span>Written by Steve Jobs</span>
+            <span>Published 2 days ago</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-listing">
+        <img src="https://picsum.photos/120/80?random=17" alt="Game image">
+        <div class="article-listing-content">
+          <span class="category news">News</span>
+          <h4>Is CD Projekt Red on a straight way to be closed?</h4>
+          <p>Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus.</p>
+          <div class="article-metadata">
+            <span>Written by Steve Jobs</span>
+            <span>Published 9 hours ago</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more .article-listing items as needed -->
+    </div>
+
+    <aside class="just-released">
+      <h2>Just Released</h2>
+      <div class="release-list">
+        <div class="release-card">
+          <img src="https://picsum.photos/60/60?random=18" alt="Released Game">
+          <div class="release-card-details">
+            <h3>Game Game 2</h3>
+            <div class="platform-badges">
+              <span class="platform-badge">PC</span>
+              <span class="platform-badge">PS</span>
+            </div>
+            <p>Today</p>
+          </div>
+        </div>
+        <div class="release-card">
+          <img src="https://picsum.photos/60/60?random=19" alt="Released Game">
+          <div class="release-card-details">
+            <h3>Super Game</h3>
+            <span class="platform-badge">PC</span>
+            <p>Yesterday</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="newsletter-section">
+    <h2>The latest gaming news, from niche to groundbreaking</h2>
+    <p>Be updated with the most recent gaming coverage. Provided by us straight into your e-mail.</p>
+    <form class="newsletter-form" aria-label="Newsletter signup">
+      <input type="email" placeholder="Your email address" aria-label="Email" required>
+      <button type="submit">SIGN UP FOR THE NEWSLETTER</button>
+    </form>
+    <p class="newsletter-note">
+      By submitting your information, you agree to the Terms of Use and Privacy Policy and are aged 16 or over.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrapper">
+    <nav aria-label="Footer navigation">
+      <ul>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Games</a></li>
+        <li><a href="#">Reviews</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </nav>
+    <div class="social-links">
+      <a href="#">F</a>
+      <a href="#">I</a>
+      <a href="#">T</a>
+      <a href="#">Y</a>
+    </div>
+    <p>Copyright © 2024, THIS IS A STUDENT PROJECT</p>
+    <p>Authors: Samuel Brabec, Wiktor Zielukdowski, Illia Zavadskyi, Dmytro Baliuk</p>
+  </div>
+</footer>
+
 </body>
 </html>
