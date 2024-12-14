@@ -51,13 +51,13 @@ body {
 	color: var(--color-text-primary);
 	background-color: var(--color-bg-primary);
 	line-height: 1.5;
-	/* Reduced padding-top to bring secondary nav closer to the header */
-	padding-top: 90px;
+	/* Adjust padding-top to position secondary nav appropriately */
+	padding-top: 80px;
 }
 
 img {
 	display: block;
-	max-width: 100%;
+	width: 100%;
 	height: auto;
 }
 
@@ -123,7 +123,6 @@ nav[aria-label="Main navigation"] a {
 	text-transform: uppercase;
 }
 
-/* Header icons */
 .header-icons {
 	display: flex;
 	align-items: center;
@@ -165,17 +164,14 @@ nav[aria-label="Main navigation"] a {
 /* Secondary Navigation */
 .secondary-nav {
 	background-color: var(--color-bg-highlight);
-	/* Make sure the wrapper can stretch full width */
 }
 
 .secondary-nav .wrapper {
 	display: flex;
 	align-items: center;
-	/* Use space-between to stretch links across full width */
 	justify-content: space-between;
-	/* Increase top/bottom padding for a more spacious look */
 	padding: var(--spacing-sm) var(--spacing-lg);
-	max-width: none; /* Allow full width */
+	max-width: none;
 	width: 100%;
 }
 
@@ -184,7 +180,7 @@ nav[aria-label="Main navigation"] a {
 	font-size: var(--font-size-md);
 	font-weight: var(--font-weight-bold);
 	text-transform: uppercase;
-	letter-spacing: 2px; /* Increase letter spacing between characters */
+	letter-spacing: normal;
 }
 
 .secondary-nav a.active {
@@ -228,9 +224,9 @@ nav[aria-label="Main navigation"] a {
 	padding: var(--spacing-sm);
 }
 
+/* Use aspect-ratio for images to be responsive */
 .featured-item img {
-	width: 100%;
-	height: 200px;
+	aspect-ratio: 16/9;
 	object-fit: cover;
 }
 
@@ -281,8 +277,7 @@ nav[aria-label="Main navigation"] a {
 }
 
 .content-grid article img {
-	width: 100%;
-	height: 150px;
+	aspect-ratio: 4/3;
 	object-fit: cover;
 }
 
@@ -330,8 +325,7 @@ nav[aria-label="Main navigation"] a {
 }
 
 .review-grid article img {
-	width: 100%;
-	height: 150px;
+	aspect-ratio: 4/3;
 	object-fit: cover;
 }
 
@@ -361,6 +355,7 @@ nav[aria-label="Main navigation"] a {
 	gap: var(--spacing-sm);
 	margin-top: var(--spacing-lg);
 	margin-bottom: var(--spacing-xs);
+	flex-wrap: wrap; /* allow wrap on smaller screens */
 }
 
 .tabs button {
@@ -399,16 +394,19 @@ nav[aria-label="Main navigation"] a {
 	display: flex;
 	gap: var(--spacing-sm);
 	margin-bottom: var(--spacing-md);
+	flex-wrap: wrap; /* allow reflow on smaller screens */
 }
 
 .article-listing img {
 	width: 120px;
-	height: 80px;
+	height: auto;
+	aspect-ratio: 3/2;
 	object-fit: cover;
 }
 
 .article-listing-content {
 	flex: 1;
+	min-width: 200px; /* ensure some width on small screens */
 }
 
 .article-listing-content .category {
@@ -435,6 +433,7 @@ nav[aria-label="Main navigation"] a {
 	justify-content: space-between;
 	color: var(--color-gray-medium);
 	font-size: var(--font-size-sm);
+	flex-wrap: wrap; /* allow wrapping metadata on small screens */
 }
 
 /* Just Released Aside */
@@ -533,6 +532,8 @@ nav[aria-label="Main navigation"] a {
 	padding: var(--spacing-sm);
 	border: none;
 	font-size: var(--font-size-md);
+	width: 100%;
+	box-sizing: border-box;
 }
 
 .newsletter-form button {
@@ -544,6 +545,8 @@ nav[aria-label="Main navigation"] a {
 	cursor: pointer;
 	color: var(--color-white);
 	text-transform: uppercase;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 .newsletter-note {
@@ -586,6 +589,13 @@ footer nav a {
 }
 
 /* Responsive enhancements */
+@media (max-width: 767px) {
+	/* Adjust font sizes for smaller screens if needed */
+	html {
+		font-size: 90%; /* Slightly smaller base font on very small screens */
+	}
+}
+
 @media (min-width: 768px) {
 	.section-heading-row h1 {
 		margin-bottom: 0;
