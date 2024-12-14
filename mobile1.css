@@ -24,6 +24,14 @@
     padding: 0;
 }
 
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+/* Body as flexible layout */
 body {
     background-color: #f5f5f5;
     display: flex;
@@ -32,9 +40,14 @@ body {
     font-family: var(--font-regular);
 }
 
-/* Main content area expands to push footer down if needed */
+/* Main content grows to push footer down if there's extra space */
 main#tabs {
     flex: 1;
+    width: 100%;
+    /* center content inside if needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Header */
@@ -47,39 +60,39 @@ main#tabs {
     background-color: #000; /* black header */
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; /* Align items at the bottom of the header */
-    padding: 0 5px;
+    align-items: center;
+    padding: 0 10px;
+}
+
+/* Left side (logo + site title) */
+.header-left {
+    display: flex;
+    align-items: center;
 }
 
 #header-image {
     width: 35px;
     height: 35px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
 }
 
 #header-image img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
     border-radius: 50%;
-}
-
-/* Container for logo and site title aligned at bottom */
-.header-left {
-    display: flex;
-    align-items: flex-end; /* ensures both logo and title align at bottom */
 }
 
 #czugamer-cz {
     font-family: var(--font-bold);
     font-size: 14px;
     color: #ffffff;
-    line-height: 14px;
-    margin-left: 3px; /* just a small gap so text isn't literally touching the logo */
-    /* This positions the text at the bottom since parent is align-items:flex-end */
+    margin-left: 5px; /* minimal gap */
 }
 
-/* Menu icon at right end */
+/* Menu icon on the right */
 #menu-icon {
     width: 25px;
     height: 25px;
@@ -87,11 +100,11 @@ main#tabs {
     border-radius: 5px;
 }
 
-/* Buttons (Tabs) container */
+/* Buttons (Tabs) container: responsive width */
 #buttons {
-    width: 419px;
-    height: 17px;
-    padding: 2px;
+    width: 100%;
+    max-width: 320px;
+    padding: 5px;
     background-color: transparent;
     display: flex;
     gap: 10px;
@@ -102,6 +115,7 @@ main#tabs {
 
 /* Tabs */
 #recent-tab, #news-tab, #games-tab, #reviews-tab {
+    flex: 0 0 auto;
     width: 65px;
     height: 17px;
     padding: 2px;
@@ -115,6 +129,7 @@ main#tabs {
     line-height: normal;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
+    font-size: 12px;
 }
 
 #recent-tab {
@@ -132,7 +147,8 @@ main#tabs {
 
 /* Articles container */
 #tabs {
-    width: 266px;
+    width: 100%;
+    max-width: 300px;
     padding: 2px;
     background-color: transparent;
     margin: 0 auto;
@@ -140,38 +156,39 @@ main#tabs {
 
 /* Individual articles (6 total) */
 #item-1, #item-2, #item-3, #item-4, #item-5, #item-6 {
-    width: 266px;
-    height: 187px;
+    width: 100%;
+    height: auto;
     background-color: #ffffff;
     margin-bottom: 10px;
     border-radius: var(--border-radius);
     overflow: hidden;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Article image container */
 .item-image {
-    width: 266px;
-    height: 137px;
+    width: 100%;
+    height: auto;
     border-radius: var(--border-radius);
     overflow: hidden;
     background-color: #ccc;
+    max-height: 147px;
 }
 
 .item-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
-#item-4 .item-image {
-    height: 147px; /* Special height for item 4 */
-}
+/* If item-4 needs a special height, handle in HTML or via a class:
+   #item-4 .item-image { max-height: 147px; } already done above as max-height */
 
 /* Text spot under image */
 #text-spot {
-    width: 266px;
-    height: 80px;
+    width: 100%;
     background-color: #ffffff;
     padding: 5px;
     box-sizing: border-box;
@@ -187,8 +204,7 @@ main#tabs {
 #cities-skylines---gr,
 #super-game---fresh-r,
 #is-cd-projekt-red-on {
-    width: 246px;
-    height: 50px;
+    width: 100%;
     background-color: transparent;
     font-family: var(--font-bold);
     font-weight: 700;
@@ -215,7 +231,6 @@ main#tabs {
 /* Author text */
 .author-steve-jobs {
     width: auto;
-    height: 16px;
     font-family: var(--font-extra-light);
     font-weight: 250;
     color: var(--main-color);
@@ -224,10 +239,9 @@ main#tabs {
     font-size: 12px;
 }
 
-/* Category text (News, Games, Reviews) as classes */
+/* Category text (News, Games, Reviews) */
 .news, .games, .reviews {
     width: auto;
-    height: 16px;
     background-color: transparent;
     font-family: var(--font-medium);
     font-weight: 500;
@@ -240,7 +254,6 @@ main#tabs {
 /* Time text */
 .time {
     width: auto;
-    height: 16px;
     background-color: transparent;
     font-family: var(--font-medium);
     font-weight: 500;
@@ -264,10 +277,12 @@ main#tabs {
 }
 
 #footer {
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 10px; /* some horizontal padding */
 }
 
 #newspaper-icon,
@@ -276,6 +291,7 @@ main#tabs {
     height: 25px;
     background-color: var(--main-color);
     border-radius: 5px;
+    flex-shrink: 0;
 }
 
 .footer-search {
@@ -309,4 +325,5 @@ main#tabs {
     background-color: #8c8c8c;
     margin-left: 5px;
     border-radius: 3px;
+    flex-shrink: 0;
 }
