@@ -51,7 +51,7 @@ body {
 	color: var(--color-text-primary);
 	background-color: var(--color-bg-primary);
 	line-height: 1.5;
-	/* Add padding so that content including .secondary-nav is visible below the fixed header */
+	/* Reduced padding-top to bring secondary nav closer to the header */
 	padding-top: 90px;
 }
 
@@ -165,19 +165,26 @@ nav[aria-label="Main navigation"] a {
 /* Secondary Navigation */
 .secondary-nav {
 	background-color: var(--color-bg-highlight);
+	/* Make sure the wrapper can stretch full width */
 }
 
 .secondary-nav .wrapper {
 	display: flex;
 	align-items: center;
-	gap: var(--spacing-lg);
-	padding: var(--spacing-sm) 0;
+	/* Use space-between to stretch links across full width */
+	justify-content: space-between;
+	/* Increase top/bottom padding for a more spacious look */
+	padding: var(--spacing-sm) var(--spacing-lg);
+	max-width: none; /* Allow full width */
+	width: 100%;
 }
 
 .secondary-nav a {
 	color: var(--color-white);
-	font-size: var(--font-size-sm);
+	font-size: var(--font-size-md);
 	font-weight: var(--font-weight-bold);
+	text-transform: uppercase;
+	letter-spacing: 2px; /* Increase letter spacing between characters */
 }
 
 .secondary-nav a.active {
