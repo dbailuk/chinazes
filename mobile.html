@@ -8,158 +8,109 @@
 </head>
 <body>
 
-<header id="page-header">
+<header id="header-phone">
     <div class="header-left">
-        <div class="logo">
-            <img src="https://picsum.photos/35/35" alt="CzuGamer Logo" />
+        <div id="header-image">
+            <img src="Pictures/logo.png" alt="CzuGamer Logo" />
         </div>
-        <h1 class="site-title">CzuGamer.cz</h1>
+        <div id="czugamer-cz">CzuGamer.cz</div>
     </div>
-    <button class="profile-trigger" aria-haspopup="true" aria-expanded="false" aria-label="Open Profile Menu"></button>
-    <aside class="profile-dropdown" aria-label="Profile Menu">
-        <ul>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Logout</a></li>
-        </ul>
-    </aside>
+    <div id="menu-icon">
+    <img src="Pictures/menu.png" alt="CzuGamer Logo" />
+    </div>
 </header>
 
-<div class="search-bar">
-    <div class="search-icon" aria-hidden="true"></div>
-    <input type="search" placeholder="Search..." aria-label="Search through site content" class="search-input"/>
+<!-- Tabs (Navigation Buttons) -->
+<div id="buttons">
+    <div id="recent-tab">Recent</div>
+    <div id="news-tab">News</div>
+    <div id="games-tab">Games</div>
+    <div id="reviews-tab">Reviews</div>
 </div>
 
-<nav class="tabs-nav" role="tablist" aria-label="Content categories">
-    <!-- Radio inputs to manage tabs -->
-    <input type="radio" name="tabs" id="tab-recent" checked aria-controls="recent-panel" role="tab" aria-selected="true"/>
-    <label for="tab-recent" class="tab-label">Recent</label>
-
-    <input type="radio" name="tabs" id="tab-news" aria-controls="news-panel" role="tab" aria-selected="false"/>
-    <label for="tab-news" class="tab-label">News</label>
-
-    <input type="radio" name="tabs" id="tab-games" aria-controls="games-panel" role="tab" aria-selected="false"/>
-    <label for="tab-games" class="tab-label">Games</label>
-
-    <input type="radio" name="tabs" id="tab-reviews" aria-controls="reviews-panel" role="tab" aria-selected="false"/>
-    <label for="tab-reviews" class="tab-label">Reviews</label>
-</nav>
-
-<main class="tab-content">
-
-    <!-- Recent panel -->
-    <section id="recent-panel" class="tab-panel recent-items" role="tabpanel" aria-labelledby="tab-recent">
-        <article class="item">
-            <img src="https://picsum.photos/266/137?random=1" alt="Former CEO of Nokia concerned about ecology" class="item-img"/>
-            <h3>Former CEO of Nokia concerned about ecology</h3>
-            <p class="author">by Steve Jobs</p>
-            <p class="category">News</p>
-            <p class="time">1 hour ago</p>
-        </article>
-
-        <article class="item">
-            <img src="https://picsum.photos/266/137?random=2" alt="Game Game 2 - fresh release" class="item-img"/>
-            <h3>Game Game 2 - fresh release</h3>
-            <p class="author">by Steve Jobs</p>
-            <p class="category">Games</p>
-            <p class="time">2 hours ago</p>
-        </article>
-
-        <article class="item">
-            <img src="https://picsum.photos/266/137?random=3" alt="Tesco Piwko Sim - fresh release" class="item-img"/>
-            <h3>Tesco Piwko Sim - fresh release</h3>
-            <p class="author">by Steve Jobs</p>
-            <p class="category">Games</p>
-            <p class="time">2 hours ago</p>
-        </article>
-    </section>
-
-    <!-- News panel -->
-    <section id="news-panel" class="tab-panel news-items" role="tabpanel" aria-labelledby="tab-news">
-        <article class="item">
-            <img src="https://picsum.photos/266/147?random=4" alt="Cities Skylines - greatest city simulator of all times? Review" class="item-img"/>
-            <h3>Cities Skylines - greatest city simulator of all times? Review</h3>
-            <p class="author">by Steve Jobs</p>
-            <p class="category">Reviews</p>
-            <p class="time">5 hours ago</p>
-        </article>
-
-        <article class="item">
-            <img src="https://picsum.photos/266/137?random=5" alt="Super Game - fresh release" class="item-img"/>
-            <h3>Super Game - fresh release</h3>
-            <p class="author">by Steve Jobs</p>
-            <p class="category">Games</p>
-            <p class="time">6 hours ago</p>
-        </article>
-
-        <article class="item">
-            <img src="https://picsum.photos/266/137?random=6" alt="Is CD Projekt Red on a straight way to be closed?" class="item-img"/>
-            <h3>Is CD Projekt Red on a straight way to be closed?</h3>
-            <p class="author">by Steve Jobs</p>
-            <p class="category">News</p>
-            <p class="time">9 hours ago</p>
-        </article>
-    </section>
-
-    <!-- Games panel -->
-    <section id="games-panel" class="tab-panel games-items" role="tabpanel" aria-labelledby="tab-games">
-        <article class="item">
-            <img src="https://picsum.photos/266/137?random=7" alt="Indie Newcomer Surprises Market" class="item-img"/>
-            <h3>Indie Newcomer Surprises Market</h3>
-            <p class="author">by John Doe</p>
-            <p class="category">Games</p>
-            <p class="time">3 hours ago</p>
-        </article>
-
-        <article class="item">
-            <img src="https://picsum.photos/266/137?random=8" alt="Racing Infinity - Breaking speed records" class="item-img"/>
-            <h3>Racing Infinity - Breaking speed records</h3>
-            <p class="author">by Jane Smith</p>
-            <p class="category">Games</p>
-            <p class="time">4 hours ago</p>
-        </article>
-
-        <article class="item">
-            <img src="https://picsum.photos/266/137?random=9" alt="Adventure Quest - Magical Lands Await" class="item-img"/>
-            <h3>Adventure Quest - Magical Lands Await</h3>
-            <p class="author">by Alex Writer</p>
-            <p class="category">Games</p>
-            <p class="time">7 hours ago</p>
-        </article>
-    </section>
-
-    <!-- Reviews panel -->
-    <section id="reviews-panel" class="tab-panel reviews-items" role="tabpanel" aria-labelledby="tab-reviews">
-        <article class="item">
-            <img src="https://picsum.photos/266/137?random=10" alt="Epic Adventure Review - Is it Worth It?" class="item-img"/>
-            <h3>Epic Adventure Review - Is it Worth It?</h3>
-            <p class="author">by Mark Tester</p>
-            <p class="category">Reviews</p>
-            <p class="time">10 hours ago</p>
-        </article>
-
-        <article class="item">
-            <img src="https://picsum.photos/266/137?random=11" alt="Rogue Galaxy Review - Endless Space" class="item-img"/>
-            <h3>Rogue Galaxy Review - Endless Space</h3>
-            <p class="author">by Alice Reviewer</p>
-            <p class="category">Reviews</p>
-            <p class="time">12 hours ago</p>
-        </article>
-
-        <article class="item">
-            <img src="https://picsum.photos/266/137?random=12" alt="Town Builder Review - Build your Dream" class="item-img"/>
-            <h3>Town Builder Review - Build your Dream</h3>
-            <p class="author">by Steve Analyst</p>
-            <p class="category">Reviews</p>
-            <p class="time">15 hours ago</p>
-        </article>
-    </section>
+<main id="tabs">
+    <!-- 6 Items as before -->
+    <div id="item-1">
+        <div class="item-image">
+            <img src="https://picsum.photos/266/137?random=1" alt="Former CEO of Nokia concerned about ecology" />
+        </div>
+        <div id="text-spot1">
+            <div id="former-ceo-of-nokia">Former CEO of Nokia concerned about ecology</div>
+            <div class="author-steve-jobs">by Steve Jobs</div>
+            <div class="news">News</div>
+            <div class="time">1 hour ago</div>
+        </div>
+    </div>
+    <div id="item-2">
+        <div class="item-image">
+            <img src="https://picsum.photos/266/137?random=2" alt="Game Game 2 - fresh release" />
+        </div>
+        <div id="text-spot2">
+            <div id="game-game-2----fresh">Game Game 2 - fresh release</div>
+            <div class="author-steve-jobs">by Steve Jobs</div>
+            <div class="games">Games</div>
+            <div class="time">2 hours ago</div>
+        </div>
+    </div>
+    <div id="item-3">
+        <div class="item-image">
+            <img src="https://picsum.photos/266/137?random=3" alt="Tesco Piwko Sim - fresh release" />
+        </div>
+        <div id="text-spot3">
+            <div id="tesco-piwko-sim---fr">Tesco Piwko Sim - fresh release</div>
+            <div class="author-steve-jobs">by Steve Jobs</div>
+            <div class="games">Games</div>
+            <div class="time">2 hours ago</div>
+        </div>
+    </div>
+    <div id="item-4">
+        <div class="item-image">
+            <img src="https://picsum.photos/266/147?random=4" alt="Cities Skylines - greatest city simulator of all times? Review" />
+        </div>
+        <div id="text-spot4">
+            <div id="cities-skylines---gr">Cities Skylines - greatest city simulator of all times? Review</div>
+            <div class="author-steve-jobs">by Steve Jobs</div>
+            <div class="reviews">Reviews</div>
+            <div class="time">5 hours ago</div>
+        </div>
+    </div>
+    <div id="item-5">
+        <div class="item-image">
+            <img src="https://picsum.photos/266/137?random=5" alt="Super Game - fresh release" />
+        </div>
+        <div id="text-spot5">
+            <div id="super-game---fresh-r">Super Game - fresh release</div>
+            <div class="author-steve-jobs">by Steve Jobs</div>
+            <div class="games">Games</div>
+            <div class="time">6 hours ago</div>
+        </div>
+    </div>
+    <div id="item-6">
+        <div class="item-image">
+            <img src="https://picsum.photos/266/137?random=6" alt="Is CD Projekt Red on a straight way to be closed?" />
+        </div>
+        <div id="text-spot6">
+            <div id="is-cd-projekt-red-on">Is CD Projekt Red on a straight way to be closed?</div>
+            <div class="author-steve-jobs">by Steve Jobs</div>
+            <div class="news">News</div>
+            <div class="time">9 hours ago</div>
+        </div>
+    </div>
 </main>
 
-<footer id="page-footer">
-    <div class="footer-inner">
-        <div class="footer-icon newspaper-icon" aria-hidden="true"></div>
-        <div class="footer-icon profile-icon" aria-hidden="true"></div>
+<!-- Black Footer at bottom -->
+<footer id="footer-phone">
+    <div id="footer">
+        <div id="newspaper-icon"></div>
+        <div class="footer-search">
+            <input type="search" placeholder="Search..." aria-label="Search through site content" class="footer-search-input"/>
+            <div id="search-icon">
+                <img src="Pictures/search.png"/>
+            </div>
+        </div>
+        <div id="profile-icon">
+            <img src="Pictures/profile.png">
+        </div>
     </div>
 </footer>
 
