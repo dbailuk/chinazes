@@ -52,7 +52,7 @@ body {
 	background-color: var(--color-bg-primary);
 	line-height: 1.5;
 	/* Adjust padding-top to position secondary nav appropriately */
-	padding-top: 80px;
+	padding-top: 90px;
 }
 
 img {
