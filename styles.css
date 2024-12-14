@@ -51,6 +51,8 @@ body {
 	color: var(--color-text-primary);
 	background-color: var(--color-bg-primary);
 	line-height: 1.5;
+	/* Add padding so that content including .secondary-nav is visible below the fixed header */
+	padding-top: 120px;
 }
 
 img {
@@ -75,11 +77,11 @@ a {
 header {
 	background-color: var(--color-bg-secondary);
 	color: var(--color-white);
-	position: fixed; /* Make the header fixed at the top */
-	top: 0; /* Position it at the very top */
-	left: 0; /* Align it to the left */
-	width: 100%; /* Ensure it spans the full width of the viewport */
-	z-index: 1000; /* Ensure it stays above other elements */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
 }
 
 .top-bar {
@@ -109,7 +111,7 @@ header {
 nav[aria-label="Main navigation"] ul {
 	display: flex;
 	gap: var(--spacing-md);
-	list-style: none; /* Removes default bullet points or dots */
+	list-style: none;
 	margin: 0;
 	padding: 0;
 }
@@ -121,11 +123,11 @@ nav[aria-label="Main navigation"] a {
 	text-transform: uppercase;
 }
 
-/* Updated styles for the header icons */
+/* Header icons */
 .header-icons {
 	display: flex;
 	align-items: center;
-	justify-content: flex-end; /* Aligns elements to the right */
+	justify-content: flex-end;
 	gap: var(--spacing-sm);
 }
 
@@ -363,6 +365,7 @@ nav[aria-label="Main navigation"] a {
 	padding: var(--spacing-xs) var(--spacing-md);
 	font-weight: var(--font-weight-bold);
 	cursor: pointer;
+	text-transform: uppercase;
 }
 
 .tabs button.active {
@@ -407,6 +410,7 @@ nav[aria-label="Main navigation"] a {
 	font-size: var(--font-size-sm);
 	font-weight: var(--font-weight-bold);
 	color: var(--color-red);
+	text-transform: uppercase;
 }
 
 .article-listing-content h4 {
@@ -450,6 +454,8 @@ nav[aria-label="Main navigation"] a {
 .just-released h2 {
 	font-size: var(--font-size-lg);
 	margin-bottom: var(--spacing-sm);
+	font-weight: var(--font-weight-bold);
+	text-transform: uppercase;
 }
 
 .release-list {
@@ -501,6 +507,8 @@ nav[aria-label="Main navigation"] a {
 .newsletter-section h2 {
 	font-size: var(--font-size-xl);
 	margin-bottom: var(--spacing-sm);
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 .newsletter-section p {
@@ -530,6 +538,7 @@ nav[aria-label="Main navigation"] a {
 	font-weight: var(--font-weight-bold);
 	cursor: pointer;
 	color: var(--color-white);
+	text-transform: uppercase;
 }
 
 .newsletter-note {
