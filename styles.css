@@ -31,7 +31,7 @@
 	--spacing-lg: 2rem;
 	--spacing-xl: 3rem;
 
-	--max-width: 1800px;
+	--max-width: 1850px;
 }
 
 html {
@@ -52,7 +52,7 @@ body {
 	background-color: var(--color-bg-primary);
 	line-height: 1.5;
 	/* Add padding so that content including .secondary-nav is visible below the fixed header */
-	padding-top: 120px;
+	padding-top: 90px;
 }
 
 img {
@@ -165,15 +165,13 @@ nav[aria-label="Main navigation"] a {
 /* Secondary Navigation */
 .secondary-nav {
 	background-color: var(--color-bg-highlight);
-	white-space: nowrap;
-	overflow-x: auto;
 }
 
 .secondary-nav .wrapper {
 	display: flex;
 	align-items: center;
-	gap: var(--spacing-md);
-	padding: var(--spacing-xs) 0;
+	gap: var(--spacing-lg);
+	padding: var(--spacing-sm) 0;
 }
 
 .secondary-nav a {
