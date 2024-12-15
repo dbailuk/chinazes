@@ -557,10 +557,11 @@
     width: 320px;
     height: 32px;
     background-color: #ffffff;
+    box-sizing: border-box;
 }
 
 /*Search bar*/
-#rectangle {
+#search-bar {
     width: 320px;
     height: 32px;
     padding: 2px 2px 2px 2px;
@@ -575,7 +576,7 @@
     box-sizing: border-box;
 }
 /*Newspaper icon*/
-#shape {
+#newspaper-icon {
     width: 29px;
     height: 20px;
     padding: 2px 2px 2px 2px;
@@ -584,7 +585,7 @@
 }
 
 /*Profile icon*/
-#shape {
+#profile-icon {
     width: 25px;
     height: 25px;
     padding: 2px 2px 2px 2px;
