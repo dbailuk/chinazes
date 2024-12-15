@@ -26,6 +26,11 @@
     padding: 0;
 }
 
+/* Hide radio inputs */
+input[type="radio"][name="tabs"] {
+    display: none;
+}
+
 /* Prevent horizontal scrolling */
 html, body {
     overflow-x: hidden;
