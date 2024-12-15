@@ -32,6 +32,7 @@ input[type="radio"][name="tabs"] {
     display: none;
 }
 
+
 /* Prevent horizontal scrolling */
 html, body {
     overflow-x: hidden;
@@ -61,6 +62,7 @@ main#tabs {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
 }
 
 /* Header */
@@ -189,16 +191,29 @@ main#tabs {
     display: flex;
     gap: 10px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;;
     margin: 15px auto;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+
+/* Optional: Hide scrollbar for a cleaner look */
+#buttons::-webkit-scrollbar {
+    display: none;
+}
+
+#buttons {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 /* Common button styles */
 .tab-button {
     flex: 0 0 auto;
-    width: var(--button-width);
+    min-width: var(--button-width); /* Ensures consistent minimum width */
     height: var(--button-height);
-    padding: 5px 10px;
+    padding: 5px 10px; /* Adjusts padding for spacing */
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     background-color: var(--main-color);
@@ -206,10 +221,11 @@ main#tabs {
     font-weight: 500;
     color: #ffffff;
     text-align: center;
-    line-height: normal;
+    line-height: var(--button-height); /* Centers text vertically */
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
-    font-size: 14px; /* Increased font size for better readability */
+    font-size: 14px; /* Adjust font size for readability */
+    white-space: nowrap; /* Prevents text from wrapping */
 }
 
 .tab-button:hover {
@@ -235,6 +251,13 @@ main#tabs {
 /* Individual articles (6 total) */
 .tab-content {
     width: 100%;
+}
+.tab-content:target {
+    display: block; /* Display the targeted tab content */
+}
+
+.tab-content.active {
+    display: block; /* Display active tab content */
 }
 
 .item {
@@ -462,7 +485,9 @@ main#tabs {
 #recent-tab:checked ~ #tabs #recent-content,
 #news-tab:checked ~ #tabs #news-content,
 #games-tab:checked ~ #tabs #games-content,
-#reviews-tab:checked ~ #tabs #reviews-content {
+#reviews-tab:checked ~ #tabs #reviews-content,
+#technology-tab:checked ~ #buttons ~ #tabs #technology-content,
+#events-tab:checked ~ #buttons ~ #tabs #events-content {
     display: flex;
     flex-direction: column;
     align-items: center;
