@@ -455,7 +455,7 @@ main#tabs {
     z-index: 999;
     width: 100%;
     background-color: #000000; /* black footer background */
-    padding: 10px 0;
+    padding: 5px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -463,38 +463,49 @@ main#tabs {
 
 #footer {
     width: 100%;
-    max-width: 360px; /* Increased max-width for consistency */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 15px; /* Increased padding */
+    justify-content: space-between; /* Ensures icons are at the edges */
+    padding: 0 10px;
 }
 
-#newspaper-icon,
+#newspaper-icon {
+    width: 50px; /* Increased size for better visibility */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #profile-icon {
-    width: 30px; /* Increased size */
-    height: 30px;
-    border-radius: 5px;
-    flex-shrink: 0;
+    width: 50px; /* Increased size for better visibility */
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#newspaper-icon img,
+#newspaper-icon img {
+    width: 30px; /* Scaled up icon */
+    height: 30px;
+    object-fit: contain;
+}
 #profile-icon img {
-    width: 18px;
-    height: 18px;
+    width: 30px; /* Scaled up icon */
+    height: 30px;
+    object-fit: contain;
 }
 
 .footer-search {
     display: flex;
     align-items: center;
+    position: relative; /* Enable relative positioning for the container */
     background-color: #ffffff;
     border-radius: 5px;
     padding: 5px 10px;
-    flex: 1;
-    margin: 0 15px;
+    max-width: 200px;
+    flex-shrink: 0; /* Prevent the search bar from shrinking */
+    min-width: 100px;
+    margin: 0; /* Remove any extra margins */
 }
 
 .footer-search-input {
@@ -502,10 +513,11 @@ main#tabs {
     border: none;
     outline: none;
     font-family: var(--font-medium);
-    font-size: 16px; /* Increased font size */
-    padding: 5px;
+    font-size: 14px;
+    padding: 2px 5px; /* Add padding to separate input text from icon */
     color: #333;
     background-color: transparent;
+    margin-right: 25px;
 }
 
 .footer-search-input::placeholder {
@@ -513,11 +525,10 @@ main#tabs {
 }
 
 #search-icon {
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-    border-radius: 3px;
-    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -528,7 +539,23 @@ main#tabs {
     height: 12px;
 }
 
-/* Tabs Styling */
+@media (max-width: 400px) {
+    #footer {
+        flex-wrap: wrap; /* Allow elements to stack if necessary */
+        justify-content: center; /* Center-align elements */
+        padding: 10px;
+    }
+
+    #newspaper-icon, #profile-icon {
+        width: 40px; /* Reduce icon sizes for small screens */
+        height: 40px;
+    }
+
+    .footer-search {
+        max-width: 150px; /* Constrain width further on smaller screens */
+        margin: 10px auto; /* Center search bar when wrapped */
+    }
+}
 
 /* Hide the radio inputs */
 #buttons input[type="radio"] {
