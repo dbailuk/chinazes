@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CZUgamer.cz - Responsive Version</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+<!-- Mobile Version -->
+<div class="mobile-version">
+    <header id="header-phone">
+        <div class="header-left">
+            <div id="header-image">
+                <img src="Pictures/logo.png" alt="CzuGamer Logo" />
+            </div>
+            <div id="czugamer-cz">CZUgamer.cz</div>
+        </div>
+        <div id="menu-icon" aria-label="Toggle Menu" aria-haspopup="true" aria-expanded="false">
+            <img src="Pictures/menu.png" alt="Menu Icon" />
+        </div>
+    </header>
+
+    <!-- Dropdown Menu -->
+    <nav id="menu" role="navigation" aria-hidden="true">
+        <a href="#" id="news">News</a>
+        <a href="#" id="games">Games</a>
+        <a href="#" id="reviews">Reviews</a>
+        <a href="#" id="technology">Technology</a>
+        <a href="#" id="events">Events</a>
+        <a href="#" id="subscription">Subscription</a>
+        <a href="#" id="log-in">Log In</a>
+        <a href="#" id="newsletter">Newsletter</a>
+        <a href="#" id="about-us">About Us</a>
+        <a href="#" id="terms-of-use">Terms of Use</a>
+        <a href="#" id="privacy-policy">Privacy Policy</a>
+    </nav>
+
+    <!-- Radio Inputs (Hidden) -->
+    <!-- These need to be placed before the buttons and tabs for CSS sibling selectors to work correctly -->
+    <input type="radio" name="tabs" id="recent-tab" checked>
+    <input type="radio" name="tabs" id="news-tab">
+    <input type="radio" name="tabs" id="games-tab">
+    <input type="radio" name="tabs" id="reviews-tab">
+    <input type="radio" name="tabs" id="technology-tab">
+    <input type="radio" name="tabs" id="events-tab">
+
+    <!-- Tabs (Labels Styled as Buttons) -->
+    <div id="buttons">
+        <label class="tab-button" for="recent-tab">Recent</label>
+        <label class="tab-button" for="news-tab">News</label>
+        <label class="tab-button" for="games-tab">Games</label>
+        <label class="tab-button" for="reviews-tab">Reviews</label>
+        <label class="tab-button" for="technology-tab">Technology</label>
+        <label class="tab-button" for="events-tab">Events</label>
+    </div>
+
+    <!-- Main Content Area -->
+    <main id="tabs">
+        <!-- Recent Tab Content -->
+        <div class="tab-content" id="recent-content">
+            <!-- Article 1 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/nokia.jpeg" alt="Former CEO of Nokia concerned about ecology" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Former CEO of Nokia concerned about ecology</div>
+                    <div class="author">by Steve Jobs</div>
+                    <div class="category">News</div>
+                    <div class="time">1 hour ago</div>
+                </div>
+            </div>
+            <!-- Article 2 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/game_game_2.png" alt="Game Game 2 - fresh release" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Game Game 2 - fresh release</div>
+                    <div class="author">by Jane Doe</div>
+                    <div class="category">Games</div>
+                    <div class="time">2 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 3 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/tesco_piwko.jpg" alt="Tesco Piwko Sim - fresh release" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Tesco Piwko Sim - fresh release</div>
+                    <div class="author">by John Smith</div>
+                    <div class="category">Games</div>
+                    <div class="time">2 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 4 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/cities_skylines.jpg" alt="Cities Skylines - greatest city simulator of all times? Review" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Cities Skylines - greatest city simulator of all times? Review</div>
+                    <div class="author">by Emily Clark</div>
+                    <div class="category">Reviews</div>
+                    <div class="time">5 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 5 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/super_game.png" alt="Super Game - fresh release" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Super Game - fresh release</div>
+                    <div class="author">by Michael Brown</div>
+                    <div class="category">Games</div>
+                    <div class="time">6 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 6 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/cd_projekt.jpg" alt="Is CD Projekt Red on a straight way to be closed?" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Is CD Projekt Red on a straight way to be closed?</div>
+                    <div class="author">by Sarah Johnson</div>
+                    <div class="category">News</div>
+                    <div class="time">9 hours ago</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- News Tab Content -->
+        <div class="tab-content" id="news-content">
+            <!-- Article 1 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/nokia.jpeg" alt="Former CEO of Nokia concerned about ecology" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Former CEO of Nokia concerned about ecology</div>
+                    <div class="author">by Steve Jobs</div>
+                    <div class="category">News</div>
+                    <div class="time">1 hour ago</div>
+                </div>
+            </div>
+            <!-- Article 2 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/cd_projekt.jpg" alt="Is CD Projekt Red on a straight way to be closed?" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Is CD Projekt Red on a straight way to be closed?</div>
+                    <div class="author">by Sarah Johnson</div>
+                    <div class="category">Game developers</div>
+                    <div class="time">9 hour ago</div>
+                </div>
+            </div>
+            <!-- Article 3 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/large_thumbnail.webp" alt="Grand Theft Auto San Andreas - all hidden locations" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Grand Theft Auto San Andreas - all hidden locations</div>
+                    <div class="author">by John Doe</div>
+                    <div class="category">Game locations</div>
+                    <div class="time">7 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 4 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/alzabox.jpg" alt="Urban smog on the streets - AlzaBox a polluter?" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Urban smog on the streets - AlzaBox a polluter?</div>
+                    <div class="author">by Karen Black</div>
+                    <div class="category">Ecology</div>
+                    <div class="time">3 days ago</div>
+                </div>
+            </div>
+            <!-- Article 5 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/steve_jobs.jpeg" alt="Steve Jobs SEEN in Argentina! Is he still alive and why?" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Steve Jobs SEEN in Argentina! Is he still alive and why?</div>
+                    <div class="author">by Tom Harris</div>
+                    <div class="category">Pranks</div>
+                    <div class="time">4 days ago</div>
+                </div>
+            </div>
+            <!-- Article 6 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/minecraft_house.jpg" alt="Divorce of Mojang and Microsoft? Jeb confirms" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Divorce of Mojang and Microsoft? Jeb confirms</div>
+                    <div class="author">by Nancy Lee</div>
+                    <div class="category">Game developers</div>
+                    <div class="time">5 days ago</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Games Tab Content -->
+        <div class="tab-content" id="games-content">
+            <!-- Article 1 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/age_of_empires_2.jpg" alt="Let's check your knowledge from classic Age of Empires 2!" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Let's check your knowledge from classic Age of Empires 2!</div>
+                    <div class="author">by Sam Wilson</div>
+                    <div class="category">Age of Empires 2</div>
+                    <div class="time">2 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 2 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/nfs_mw.jpg" alt="Now I'm only a bus driver. Sad story of Przemek" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Space Invaders Reboot Announced</div>
+                    <div class="author">by Laura Adams</div>
+                    <div class="category">Games</div>
+                    <div class="time">2 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 3 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/game_game_2.png" alt="Game Game 2 - fresh release" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Game Game 2 - fresh release</div>
+                    <div class="author">by Jane Doe</div>
+                    <div class="category">Games</div>
+                    <div class="time">3 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 4 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/tesco_piwko.jpg" alt="Tesco Piwko Sim - fresh release" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Fantasy World - Character Customization</div>
+                    <div class="author">by John Smith</div>
+                    <div class="category">Release</div>
+                    <div class="time">4 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 5 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/super_game.png" alt="Super Game - fresh release" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Puzzle Mania - New Levels Released</div>
+                    <div class="author">by Brian Lee</div>
+                    <div class="category">Release</div>
+                    <div class="time">5 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 6 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/just_cause_4.jpg" alt="Just Cause 4 now for FREE on Epic Games!" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Just Cause 4 now for FREE on Epic Games!</div>
+                    <div class="author">by Olivia King</div>
+                    <div class="category">Gaming deal</div>
+                    <div class="time">18 days ago</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviews Tab Content -->
+        <div class="tab-content" id="reviews-content">
+            <!-- Article 1 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/eafc25.jpg" alt="EA Sports FC 25" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">EA Sports FC 25</div>
+                    <div class="author">by Daniel Scott</div>
+                    <div class="category">Official</div>
+                    <div class="time">2 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 2 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/Asphalt_8.jpg" alt="Asphalt 8 - mobile version, Android" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Asphalt 8 - mobile version, Android</div>
+                    <div class="author">by Sophia Turner</div>
+                    <div class="category">Community</div>
+                    <div class="time">5 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 3 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/horizon.jpeg" alt="Horizon Zero Dawn - Remastered" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Horizon Zero Dawn - Remastered</div>
+                    <div class="author">by Ethan Brown</div>
+                    <div class="category">Official</div>
+                    <div class="time">2 days ago</div>
+                </div>
+            </div>
+            <!-- Article 4 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/gta6.jpg" alt="Grand Theft Auto VI - exclusive review" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Grand Theft Auto VI - exclusive review</div>
+                    <div class="author">by Ava Wilson</div>
+                    <div class="category">Official</div>
+                    <div class="time">4 days ago</div>
+                </div>
+            </div>
+            <!-- Article 5 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/cod.jpg" alt="Call of Duty: Modern Warfare II" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Call of Duty: Modern Warfare II</div>
+                    <div class="author">by Mason Davis</div>
+                    <div class="category">Community</div>
+                    <div class="time">5 days ago</div>
+                </div>
+            </div>
+            <!-- Article 6 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/cities_skylines.jpg" alt="RPG Legends - Character Development" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">RPG Legends - Character Development</div>
+                    <div class="author">by Isabella Moore</div>
+                    <div class="category">Official</div>
+                    <div class="time">7 days ago</div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content" id="technology-content">
+            <!-- Article 1 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/iPhone-15.jpg" alt="iPhone 15 as a Christmas gift? Czech parents are in favour" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">iPhone 15 as a Christmas gift? Czech parents are in favour</div>
+                    <div class="author">by Alice Green</div>
+                    <div class="category">Technology</div>
+                    <div class="time">4 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 2 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/cars.jpg" alt="First Polish electric car will be available in 2137? PM answers" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">First Polish electric car will be available in 2137? PM answers</div>
+                    <div class="author">by Bob Martin</div>
+                    <div class="category">Technology</div>
+                    <div class="time">5 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 3 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/apple_1.png" alt="Brno's high school students using Apple Computer I" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Brno's high school students using Apple Computer I</div>
+                    <div class="author">by Carol Lee</div>
+                    <div class="category">Technology</div>
+                    <div class="time">7 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 4 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/laptop.jpg" alt="The best gaming laptops of 2024!" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">The best gaming laptops of 2024!</div>
+                    <div class="author">by David Kim</div>
+                    <div class="category">Technology</div>
+                    <div class="time">2 days ago</div>
+                </div>
+            </div>
+            <!-- Article 5 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/microsoft_laptop.webp" alt="Microsoft and their hardware - is their laptop that good?" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Microsoft and their hardware - is their laptop that good?</div>
+                    <div class="author">by Eva Sanchez</div>
+                    <div class="category">Technology</div>
+                    <div class="time">3 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 6 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/laptop_typing.jpeg" alt="How to save your time by using planner apps?" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">How to save your time by using planner apps?</div>
+                    <div class="author">by Frank Liu</div>
+                    <div class="category">Technology</div>
+                    <div class="time">4 hours ago</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Events Tab Content -->
+        <div class="tab-content" id="events-content">
+            <!-- Article 1 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/iem_kato.jpg" alt="IEM Katowice 2025 - all you have to know about it!" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">IEM Katowice 2025 - all you have to know about it!</div>
+                    <div class="author">by Grace Turner</div>
+                    <div class="category">Events</div>
+                    <div class="time">2 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 2 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/the_game_awards.jpg" alt="The Game Awards - nominees" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Tech Expo 2024 Highlights</div>
+                    <div class="author">by Henry Clark</div>
+                    <div class="category">Awards</div>
+                    <div class="time">7 hours ago</div>
+                </div>
+            </div>
+            <!-- Article 3 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/Game-convention.jpg" alt="Game convent in Bratislava, 1.12.2024" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Game convent in Bratislava, 1.12.2024</div>
+                    <div class="author">by Irene Fox</div>
+                    <div class="category">Convention</div>
+                    <div class="time">2 days ago</div>
+                </div>
+            </div>
+            <!-- Article 4 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/cluj-napoca.jpg" alt="IEM Cluj-Napoca 2014 - back in history" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">IEM Cluj-Napoca 2014 - back in history</div>
+                    <div class="author">by Jack Nelson</div>
+                    <div class="category">Events</div>
+                    <div class="time">4 days ago</div>
+                </div>
+            </div>
+            <!-- Article 5 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/the_game_awards.jpg" alt="Final Fantasy VII Rebirth nominated to the TGA" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">Final Fantasy VII Rebirth nominated to the TGA</div>
+                    <div class="author">by Karen Hill</div>
+                    <div class="category">Events</div>
+                    <div class="time">8 days ago</div>
+                </div>
+            </div>
+            <!-- Article 6 -->
+            <div class="item">
+                <div class="item-image">
+                    <img src="Pictures/ps_conv.jpg" alt="PlayStation convention in California, CA" />
+                </div>
+                <div class="text-spot">
+                    <div class="headline">PlayStation convention in California, CA</div>
+                    <div class="author">by Liam Brown</div>
+                    <div class="category">Events</div>
+                    <div class="time">6 days ago</div>
+                </div>
+            </div>
+        </div>
+        <div id="newslettersub">
+            <div id="rectangle">
+                <h2 id="the-latest-gaming-ne">The latest gaming news</h2>
+                <p id="be-updated-with-the">Be updated with the latest and greatest in gaming directly to your inbox.</p>
+                <div id="input-container">
+                    <input type="text" id="text-field" placeholder="Enter your email" />
+                    <button id="sign-up">Sign Up</button>
+                </div>
+                <p id="by-submitting-your-i">By submitting your information, you agree to our terms and privacy policy.</p>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer id="footer-phone">
+        <div id="footer">
+            <div id="newspaper-icon">
+                <img src="Pictures/newspaper.png" alt="Newspaper Icon" />
+            </div>
+            <div class="footer-search">
+                <input type="search" aria-label="Search through site content" class="footer-search-input"/>
+                <div id="search-icon">
+                    <img src="Pictures/search.png" alt="Search Icon"/>
+                </div>
+            </div>
+            <div id="profile-icon">
+                <img src="Pictures/profile.png" alt="Profile Icon">
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toggle Menu Script -->
+    <script>
+        // Wait until the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.getElementById('menu-icon');
+            const menu = document.getElementById('menu');
+            const body = document.body;
+
+            // Function to toggle menu
+            function toggleMenu(event) {
+                event.stopPropagation(); // Prevent the click from bubbling up to the document
+                const isActive = menu.classList.toggle('active');
+                menuIcon.setAttribute('aria-expanded', isActive);
+                menu.setAttribute('aria-hidden', !isActive);
+                body.classList.toggle('no-scroll', isActive);
+            }
+
+            // Event listener for menu icon click
+            menuIcon.addEventListener('click', toggleMenu);
+
+            // Event listener for clicks outside the menu to close it
+            document.addEventListener('click', function(event) {
+                if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                    if (menu.classList.contains('active')) {
+                        menu.classList.remove('active');
+                        menuIcon.setAttribute('aria-expanded', false);
+                        menu.setAttribute('aria-hidden', true);
+                        body.classList.remove('no-scroll');
+                    }
+                }
+            });
+
+            // Close menu when a link is clicked
+            const menuLinks = menu.querySelectorAll('a');
+            menuLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (menu.classList.contains('active')) {
+                        menu.classList.remove('active');
+                        menuIcon.setAttribute('aria-expanded', false);
+                        menu.setAttribute('aria-hidden', true);
+                        body.classList.remove('no-scroll');
+                    }
+                });
+            });
+
+            // Close menu with Escape key
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape' && menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                    menuIcon.setAttribute('aria-expanded', false);
+                    menu.setAttribute('aria-hidden', true);
+                    body.classList.remove('no-scroll');
+                }
+            });
+        });
+    </script>
+</div>
+
+<!-- Desktop Version -->
+<div class="desktop-version">
+    <header>
+        <div class="top-bar wrapper">
+            <div class="logo">
+                <img src="images/logo_u4.png" alt="Site Logo" />
+                <div class="site-name">CZUgamer.cz</div>
+            </div>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="#" aria-current="page">News</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Events</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <div class="search-bar">
+                    <input type="text" aria-label="Search">
+                    <span class="icon">
+          <img src="Pictures/search.png" alt="Search icon">
+        </span>
+                </div>
+                <a href="#" aria-label="Subscriptions">
+                    <img src="Pictures/subscription-icon.svg" alt="Credit Card" class="credit-card-icon">
+                </a>
+                <a href="#" aria-label="User account">
+                    <img src="Pictures/account-icon.svg" alt="User profile icon" class="account-icon">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Secondary Navigation placed outside header so it scrolls normally -->
+    <div class="secondary-nav">
+        <div class="wrapper">
+            <a href="#" class="active">Popular</a>
+            <a href="#">Ignon Age: Veilguard</a>
+            <a href="#">Stalker 2</a>
+            <a href="#">Baldur's Gate 3</a>
+            <a href="#">The Game Awards 2024</a>
+            <a href="#">E3 2025</a>
+            <a href="#">ZZZ: Miyabi Guide</a>
+            <a href="#">Infinite Nikki</a>
+            <a href="#">Fortnite Season 16</a>
+        </div>
+    </div>
+
+    <main class="wrapper">
+        <section class="featured-section">
+            <div class="section-heading-row">
+                <h1>Hot Right Now</h1>
+                <h1>Top Review This Week</h1>
+            </div>
+            <div class="featured-grid">
+                <article class="featured-item">
+                    <div class="tag">Game</div>
+                    <img src="images/u657-0.jpg" alt="Featured game image">
+                    <h2>Just Cause 4 now for FREE on Epic Games! Special offer with our code!</h2>
+                </article>
+                <article class="featured-item">
+                    <div class="tag review">Review</div>
+                    <img src="images/u80.jpeg" alt="Featured review image">
+                    <h2>Horizon Zero Dawn - Remastered</h2>
+                </article>
+            </div>
+        </section>
+
+        <!-- Articles Grid -->
+        <section class="content-grid">
+            <a href="#">
+                <article>
+                    <img src="images/u111.jpg" alt="Game image">
+                    <h3>Battlefield 3 after 13 years: still online!</h3>
+                    <p>Who are the players? A retrospective look at a classic FPS.</p>
+                </article>
+            </a>
+            <a href="#">
+                <article>
+                    <img src="images/u108.jpg" alt="Game image">
+                    <h3>Among Us in 3D?</h3>
+                    <p>We speculate on the future of the 2020 bestseller.</p>
+                </article>
+            </a>
+            <a href="#">
+                <article>
+                    <img src="images/u99.png" alt="Game image">
+                    <h3>Can you recognize these famous locations?</h3>
+                    <p>QUIZ about the most remarkable game places!</p>
+                </article>
+            </a>
+            <a href="#">
+                <article>
+                    <img src="images/u96%20(2).jpg" alt="Game image">
+                    <h3>Cities Skylines - greatest city sim of all times?</h3>
+                    <p>Review after years of continued development.</p>
+                </article>
+            </a>
+            <a href="#">
+                <article>
+                    <img src="images/u102.jpg" alt="Game image">
+                    <h3>Asphalt 8 on Android phones</h3>
+                    <p>Is it worth it? Mobile review edition.</p>
+                </article>
+            </a>
+            <a href="#">
+                <article>
+                    <img src="images/u93.jpg" alt="Game image">
+                    <h3>Valve announced de_dust3!</h3>
+                    <p>CS:GO2 players are concerned about changes.</p>
+                </article>
+            </a>
+            <a href="#">
+                <article>
+                    <img src="images/u90.jpg" alt="Game image">
+                    <h3>Hours and hours spent racing</h3>
+                    <p>Now I'm only a bus driver. Sad story of Przemek.</p>
+                </article>
+            </a>
+            <a href="#">
+                <article>
+                    <img src="Pictures/age_of_empires_2.jpg" alt="Game image">
+                    <h3>Are you a gamer dinosaur?</h3>
+                    <p>Let's check your knowledge from classic Age of Empires 2!</p>
+                </article>
+            </a>
+        </section>
+
+        <!-- Latest Reviews -->
+        <section class="latest-reviews">
+            <h2>Our Latest Reviews</h2>
+            <div class="review-grid">
+                <a href="#">
+                    <article>
+                        <img src="images/u361.jpg" alt="EA Sports FC 25">
+                        <p>EA Sports FC 25</p>
+                        <div class="review-badge">7</div>
+                    </article>
+                </a>
+                <a href="#">
+                    <article>
+                        <img src="images/u102.jpg" alt="Asphalt 8 Android">
+                        <p>Asphalt 8 - mobile version, Android</p>
+                        <div class="review-badge">4</div>
+                    </article>
+                </a>
+                <a href="#">
+                    <article>
+                        <img src="images/u80.jpeg" alt="Horizon Zero Dawn">
+                        <p>Horizon Zero Dawn - Remastered</p>
+                        <div class="review-badge">6</div>
+                    </article>
+                </a>
+                <a href="#">
+                    <article>
+                        <img src="images/u364.jpg" alt="GTA VI review">
+                        <p>Grand Theft Auto VI - exclusive review</p>
+                        <div class="review-badge">9</div>
+                    </article>
+                </a>
+                <a href="#">
+                    <article>
+                        <img src="images/u362.jpg" alt="Call of Duty MWII">
+                        <p>Call of Duty: Modern Warfare II</p>
+                        <div class="review-badge">5</div>
+                    </article>
+                </a>
+                <a href="#">
+                    <article>
+                        <img src="images/u96%20(2).jpg" alt="Cities Skylines">
+                        <p>Cities Skylines</p>
+                        <div class="review-badge">8</div>
+                    </article>
+                </a>
+            </div>
+        </section>
+
+        <!-- Just Released & Article Listings -->
+        <section class="just-released-section">
+            <div class="tabs">
+                <button class="active" data-tab-target="#tab-popular">Popular</button>
+                <button data-tab-target="#tab-recent">Recent</button>
+                <button data-tab-target="#tab-monthly">Monthly TOP</button>
+            </div>
+            <div class="divider"></div>
+
+            <div class="tab-contents article-listing-group">
+                <!-- Popular Tab Content (7 posts) -->
+                <div class="tab-content active" id="tab-popular">
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u180.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">Game</span>
+                                <h4>Check your knowledge from Age of Empires 2!</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <div class="article-metadata">
+                                    <span>Written by Steve Jobs</span>
+                                    <span>Published 2 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u102.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category news">News</span>
+                                <h4>Is CD Projekt Red on a straight way to be closed?</h4>
+                                <p>Aenean euismod bibendum laoreet.</p>
+                                <div class="article-metadata">
+                                    <span>Written by Steve Jobs</span>
+                                    <span>Published 9 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u93.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">Game</span>
+                                <h4>Fortnite Season 16 Tips</h4>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <div class="article-metadata">
+                                    <span>By Jane Doe</span>
+                                    <span>Published 1 day ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u99.png" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">Review</span>
+                                <h4>New expansion for Baldur's Gate 3</h4>
+                                <p>In-depth analysis of lore and gameplay.</p>
+                                <div class="article-metadata">
+                                    <span>By Mike Ross</span>
+                                    <span>Published 3 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u108.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">Game</span>
+                                <h4>Stalker 2: Surviving the zone</h4>
+                                <p>Key strategies for new players.</p>
+                                <div class="article-metadata">
+                                    <span>By Alice Smith</span>
+                                    <span>Published 4 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u111.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">News</span>
+                                <h4>The Game Awards 2024 Early Predictions</h4>
+                                <p>Which titles lead the charts?</p>
+                                <div class="article-metadata">
+                                    <span>By John Apple</span>
+                                    <span>Published 10 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u90.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">Review</span>
+                                <h4>Ignon Age: Veilguard - First Impressions</h4>
+                                <p>A bold step in open-world gaming.</p>
+                                <div class="article-metadata">
+                                    <span>By Carla Fierro</span>
+                                    <span>Published 5 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Recent Tab Content (7 posts) -->
+                <div class="tab-content" id="tab-recent">
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u108.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">Game</span>
+                                <h4>Stalker 2: Surviving the zone</h4>
+                                <p>Key strategies for new players.</p>
+                                <div class="article-metadata">
+                                    <span>By Alice Smith</span>
+                                    <span>Published 4 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u111.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">News</span>
+                                <h4>The Game Awards 2024 Early Predictions</h4>
+                                <p>Which titles lead the charts?</p>
+                                <div class="article-metadata">
+                                    <span>By John Apple</span>
+                                    <span>Published 10 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u180.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">Game</span>
+                                <h4>Check your knowledge from Age of Empires 2!</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <div class="article-metadata">
+                                    <span>Written by Steve Jobs</span>
+                                    <span>Published 2 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u102.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category news">News</span>
+                                <h4>Is CD Projekt Red on a straight way to be closed?</h4>
+                                <p>Aenean euismod bibendum laoreet.</p>
+                                <div class="article-metadata">
+                                    <span>Written by Steve Jobs</span>
+                                    <span>Published 9 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u93.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">Game</span>
+                                <h4>Fortnite Season 16 Tips</h4>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <div class="article-metadata">
+                                    <span>By Jane Doe</span>
+                                    <span>Published 1 day ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u99.png" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">Review</span>
+                                <h4>New expansion for Baldur's Gate 3</h4>
+                                <p>In-depth analysis of lore and gameplay.</p>
+                                <div class="article-metadata">
+                                    <span>By Mike Ross</span>
+                                    <span>Published 3 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u90.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">Review</span>
+                                <h4>Ignon Age: Veilguard - First Impressions</h4>
+                                <p>A bold step in open-world gaming.</p>
+                                <div class="article-metadata">
+                                    <span>By Carla Fierro</span>
+                                    <span>Published 5 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Monthly TOP Tab Content (7 posts) -->
+                <div class="tab-content" id="tab-monthly">
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u93.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">Game</span>
+                                <h4>Fortnite Season 16 Tips</h4>
+                                <p>Lorem ipsum dolor sit amet.</p>
+                                <div class="article-metadata">
+                                    <span>By Jane Doe</span>
+                                    <span>Published 1 day ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u108.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">Game</span>
+                                <h4>Stalker 2: Surviving the zone</h4>
+                                <p>Key strategies for new players.</p>
+                                <div class="article-metadata">
+                                    <span>By Alice Smith</span>
+                                    <span>Published 4 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u180.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">Game</span>
+                                <h4>Check your knowledge from Age of Empires 2!</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <div class="article-metadata">
+                                    <span>Written by Steve Jobs</span>
+                                    <span>Published 2 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u111.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">News</span>
+                                <h4>The Game Awards 2024 Early Predictions</h4>
+                                <p>Which titles lead the charts?</p>
+                                <div class="article-metadata">
+                                    <span>By John Apple</span>
+                                    <span>Published 10 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u99.png" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">Review</span>
+                                <h4>New expansion for Baldur's Gate 3</h4>
+                                <p>In-depth analysis of lore and gameplay.</p>
+                                <div class="article-metadata">
+                                    <span>By Mike Ross</span>
+                                    <span>Published 3 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u102.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category news">News</span>
+                                <h4>Is CD Projekt Red on a straight way to be closed?</h4>
+                                <p>Aenean euismod bibendum laoreet.</p>
+                                <div class="article-metadata">
+                                    <span>Written by Steve Jobs</span>
+                                    <span>Published 9 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="article-link">
+                        <div class="article-listing">
+                            <img src="images/u90.jpg" alt="Game image">
+                            <div class="article-listing-content">
+                                <span class="category">Review</span>
+                                <h4>Ignon Age: Veilguard - First Impressions</h4>
+                                <p>A bold step in open-world gaming.</p>
+                                <div class="article-metadata">
+                                    <span>By Carla Fierro</span>
+                                    <span>Published 5 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <aside class="just-released">
+                <h2>Just Released</h2>
+                <div class="release-list">
+                    <div class="release-card">
+                        <img src="https://picsum.photos/60/60?random=6" alt="Released Game">
+                        <div class="release-card-details">
+                            <h3>Game Game 2</h3>
+                            <div class="platform-badges">
+                                <span class="platform-badge">PC</span>
+                                <span class="platform-badge">PS</span>
+                            </div>
+                            <p>Today</p>
+                        </div>
+                    </div>
+                    <div class="release-card">
+                        <img src="https://picsum.photos/60/60?random=12" alt="Released Game">
+                        <div class="release-card-details">
+                            <h3>Super Game</h3>
+                            <div class="platform-badges">
+                                <span class="platform-badge">PC</span>
+                            </div>
+                            <p>Yesterday</p>
+                        </div>
+                    </div>
+                    <div class="release-card">
+                        <img src="https://picsum.photos/60/60?random=18" alt="Released Game">
+                        <div class="release-card-details">
+                            <h3>Tesco Piwko Sim</h3>
+                            <div class="platform-badges">
+                                <span class="platform-badge">PC</span>
+                                <span class="platform-badge">PS</span>
+                                <span class="platform-badge">XB</span>
+                            </div>
+                            <p>Yesterday</p>
+                        </div>
+                    </div>
+                    <div class="release-card">
+                        <img src="https://picsum.photos/60/60?random=24" alt="Released Game">
+                        <div class="release-card-details">
+                            <h3>TwoShot</h3>
+                            <div class="platform-badges">
+                                <span class="platform-badge">PC</span>
+                            </div>
+                            <p>2 days ago</p>
+                        </div>
+                    </div>
+                    <div class="release-card">
+                        <img src="https://picsum.photos/60/60?random=30" alt="Released Game">
+                        <div class="release-card-details">
+                            <h3>SUPERHOT 3</h3>
+                            <div class="platform-badges">
+                                <span class="platform-badge">PC</span>
+                            </div>
+                            <p>2 days ago</p>
+                        </div>
+                    </div>
+                    <div class="release-card">
+                        <img src="https://picsum.photos/60/60?random=36" alt="Released Game">
+                        <div class="release-card-details">
+                            <h3>Polish Pope Sim</h3>
+                            <div class="platform-badges">
+                                <span class="platform-badge">PC</span>
+                                <span class="platform-badge">PS</span>
+                                <span class="platform-badge">XB</span>
+                            </div>
+                            <p>3 days ago</p>
+                        </div>
+                    </div>
+                    <div class="release-card">
+                        <img src="https://picsum.photos/60/60?random=42" alt="Released Game">
+                        <div class="release-card-details">
+                            <h3>OneShot</h3>
+                            <div class="platform-badges">
+                                <span class="platform-badge">XB</span>
+                            </div>
+                            <p>3 days ago</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter-section">
+            <h2>The latest gaming news, from niche to groundbreaking</h2>
+            <p>Be updated with the most recent gaming coverage for all your daily needs, provided by us straight into your e-mail.</p>
+            <form class="newsletter-form" aria-label="Newsletter signup">
+                <input type="email" placeholder="Your email address" aria-label="Email" required>
+                <button type="submit">SIGN UP FOR THE NEWSLETTER</button>
+            </form>
+            <p class="newsletter-note">
+                By submitting your information, you agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a> and are aged 16 or over.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="social-links">
+                <a href="#" aria-label="Facebook">
+                    <img src="Pictures/facebook-icon.png" alt="Facebook icon">
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <img src="Pictures/instagram-icon.png" alt="Instagram icon">
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <img src="Pictures/twitter-icon.png" alt="Twitter icon">
+                </a>
+                <a href="#" aria-label="YouTube">
+                    <img src="Pictures/youtube-icon.png" alt="YouTube icon">
+                </a>
+            </div>
+            <nav aria-label="Footer navigation">
+                <ul>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">Copyright © 2024, THIS IS A STUDENT PROJECT</p>
+            <p class="authors">Authors: Samuel Brabec, Wiktor Zeludkowski, Illia Zavadskyi, Dmytro Bailuk</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple tab functionality
+        const tabButtons = document.querySelectorAll('.tabs button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and tab contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // Add active class to clicked button
+                button.classList.add('active');
+                // Show the corresponding tab content
+                const target = document.querySelector(button.getAttribute('data-tab-target'));
+                target.classList.add('active');
+            });
+        });
+    </script>
+</div>
+</body>
+</html>
