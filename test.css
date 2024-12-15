@@ -40,6 +40,18 @@
 
     --max-width: 1400px;
     --max-width-top: 1850px;
+
+    /*Phone colors*/
+    --main-color: #d9001b;
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --light-grey: #aaaaaa;
+    --border-color: #797979;
+
+    /* Sizing */
+    --border-radius: 33px; /* Updated to match button border-radius */
+    --button-height: 30px; /* Adjusted height for better usability */
+    --button-width: 80px; /* Adjusted width for better readability */
 }
 
 html {
@@ -1111,14 +1123,17 @@ main#tabs {
 }
 
 #newslettersub {
-    width: 267px;
+    width: 100%;
+    max-width: 360px;
     height: 354px;
     margin: 20px auto; /* Center newsletter section horizontally */
     background-color: #ffffff;
+    border-radius: 25px;
 }
 
 #rectangle {
-    width: 267px;
+    width: 100%;
+    max-width: 360px;
     height: 354px;
     padding: 2px;
     border-radius: 25px;
