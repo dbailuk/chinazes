@@ -957,7 +957,6 @@ main#tabs {
 #buttons {
     width: 100%;
     max-width: 360px; /* Increased max-width for better spacing */
-    padding: 10px 0;
     background-color: transparent;
     display: flex;
     gap: 10px;
