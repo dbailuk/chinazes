@@ -21,6 +21,21 @@
     </div>
 </header>
 
+<!-- Dropdown Menu -->
+<div id="menu">
+    <a href="#" id="news">News</a>
+    <a href="#" id="games">Games</a>
+    <a href="#" id="reviews">Reviews</a>
+    <a href="#" id="technology">Technology</a>
+    <a href="#" id="events">Events</a>
+    <a href="#" id="subscription">Subscription</a>
+    <a href="#" id="log-in">Log In</a>
+    <a href="#" id="newsletter">Newsletter</a>
+    <a href="#" id="about-us">About Us</a>
+    <a href="#" id="terms-of-use">Terms of Use</a>
+    <a href="#" id="privacy-policy">Privacy Policy</a>
+</div>
+
 <!-- Radio Inputs (Hidden) -->
 <!-- These need to be placed before the buttons and tabs for CSS sibling selectors to work correctly -->
 <input type="radio" name="tabs" id="recent-tab" checked>
@@ -119,70 +134,70 @@
         <!-- Article 1 -->
         <div class="item">
             <div class="item-image">
-                <img src="https://picsum.photos/266/180?random=7" alt="New Gaming Console Released" />
+                <img src="Pictures/nokia.jpeg" alt="Former CEO of Nokia concerned about ecology" />
             </div>
             <div class="text-spot">
-                <div class="headline">New Gaming Console Released</div>
-                <div class="author">by Alex Turner</div>
+                <div class="headline">Former CEO of Nokia concerned about ecology</div>
+                <div class="author">by Steve Jobs</div>
                 <div class="category">News</div>
-                <div class="time">30 minutes ago</div>
+                <div class="time">1 hour ago</div>
             </div>
         </div>
         <!-- Article 2 -->
         <div class="item">
             <div class="item-image">
-                <img src="https://picsum.photos/266/180?random=8" alt="E-sports Championship Announced" />
+                <img src="Pictures/cd_projekt.jpg" alt="Is CD Projekt Red on a straight way to be closed?" />
             </div>
             <div class="text-spot">
-                <div class="headline">E-sports Championship Announced</div>
-                <div class="author">by Linda White</div>
-                <div class="category">News</div>
-                <div class="time">1 hour ago</div>
+                <div class="headline">Is CD Projekt Red on a straight way to be closed?</div>
+                <div class="author">by Sarah Johnson</div>
+                <div class="category">Game developers</div>
+                <div class="time">9 hour ago</div>
             </div>
         </div>
         <!-- Article 3 -->
         <div class="item">
             <div class="item-image">
-                <img src="https://picsum.photos/266/180?random=9" alt="Tech Giant Acquires Indie Game Studio" />
+                <img src="Pictures/large_thumbnail.webp" alt="Grand Theft Auto San Andreas - all hidden locations" />
             </div>
             <div class="text-spot">
-                <div class="headline">Tech Giant Acquires Indie Game Studio</div>
-                <div class="author">by Robert Green</div>
-                <div class="category">News</div>
-                <div class="time">2 hours ago</div>
+                <div class="headline">Grand Theft Auto San Andreas - all hidden locations</div>
+                <div class="author">by John Doe</div>
+                <div class="category">Game locations</div>
+                <div class="time">7 hours ago</div>
             </div>
         </div>
         <!-- Article 4 -->
         <div class="item">
             <div class="item-image">
-                <img src="https://picsum.photos/266/180?random=10" alt="Upcoming Game Expo Highlights" />
+                <img src="Pictures/alzabox.jpg" alt="Urban smog on the streets - AlzaBox a polluter?" />
             </div>
             <div class="text-spot">
-                <div class="headline">Upcoming Game Expo Highlights</div>
+                <div class="headline">Urban smog on the streets - AlzaBox a polluter?</div>
                 <div class="author">by Karen Black</div>
-                <div class="category">News</div>
-                <div class="time">3 hours ago</div>
+                <div class="category">Ecology</div>
+                <div class="time">3 days ago</div>
             </div>
         </div>
         <!-- Article 5 -->
         <div class="item">
             <div class="item-image">
-                <img src="https://picsum.photos/266/180?random=11" alt="Virtual Reality Trends in 2024" />
+                <img src="Pictures/steve_jobs.jpeg" alt="Steve Jobs SEEN in Argentina! Is he still alive and why?" />
             </div>
             <div class="text-spot">
-                <div class="headline">Virtual Reality Trends in 2024</div>
+                <div class="headline">Steve Jobs SEEN in Argentina! Is he still alive and why?</div>
                 <div class="author">by Tom Harris</div>
-                <div class="category">News</div>
-                <div class="time">4 hours ago</div>
+                <div class="category">Pranks</div>
+                <div class="time">4 days ago</div>
             </div>
         </div>
         <!-- Article 6 -->
         <div class="item">
             <div class="item-image">
-                <img src="https://picsum.photos/266/180?random=12" alt="Mobile Gaming Growth Statistics" />
+                <img src="Pictures/minecraft_house.jpg" alt="Divorce of Mojang and Microsoft? Jeb confirms" />
             </div>
             <div class="text-spot">
-                <div class="headline">Mobile Gaming Growth Statistics</div>
+                <div class="headline">Divorce of Mojang and Microsoft? Jeb confirms</div>
                 <div class="author">by Nancy Lee</div>
                 <div class="category">News</div>
                 <div class="time">5 hours ago</div>
@@ -360,6 +375,28 @@
         </div>
     </div>
 </footer>
+
+<!-- Toggle Menu Script -->
+<script>
+    // Wait until the DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuIcon = document.getElementById('menu-icon');
+        const menu = document.getElementById('menu');
+
+        // Toggle the 'active' class on the menu when the menu icon is clicked
+        menuIcon.addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent the click from bubbling up to the document
+            menu.classList.toggle('active');
+        });
+
+        // Close the menu when clicking outside of it
+        document.addEventListener('click', function(event) {
+            if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                menu.classList.remove('active');
+            }
+        });
+    });
+</script>
 
 </body>
 </html>

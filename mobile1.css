@@ -108,11 +108,62 @@ main#tabs {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer; /* Indicate it's clickable */
 }
 
 #menu-icon img {
     width: 18px;
     height: 18px;
+}
+
+/* Dropdown Menu Styling */
+#menu {
+    position: absolute; /* Positions the menu relative to the nearest positioned ancestor */
+    top: 50px; /* Adjust based on header height */
+    right: 15px; /* Aligns the menu to the right side */
+    width: 320px;
+    height: 586px;
+    background-color: #ffffff;
+    padding: 2px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow-y: auto; /* Adds scroll if content exceeds height */
+    z-index: 1000; /* Ensures the menu appears above other elements */
+    display: none; /* Hidden by default */
+}
+
+#menu.active {
+    display: block;
+}
+
+/* Style the menu links */
+#menu a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333333;
+    font-family: "Poppins Medium", "Poppins", sans-serif;
+    font-weight: 500;
+    text-align: left;
+    line-height: normal;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* Hover effect for menu links */
+#menu a:hover {
+    background-color: #f0f0f0;
+    color: #d9001b;
+}
+
+/* Responsive adjustments for the menu */
+@media (max-width: 400px) {
+    #menu {
+        width: 100%;
+        right: 0;
+        left: 0;
+        border-radius: 0;
+    }
 }
 
 /* Buttons (Tabs) container: responsive width */
