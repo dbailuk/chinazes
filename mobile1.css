@@ -282,7 +282,6 @@ main#tabs {
 #profile-icon {
     width: 30px; /* Increased size */
     height: 30px;
-    background-color: var(--main-color);
     border-radius: 5px;
     flex-shrink: 0;
     display: flex;
@@ -324,7 +323,6 @@ main#tabs {
 #search-icon {
     width: 20px;
     height: 20px;
-    background-color: #8c8c8c;
     margin-left: 10px;
     border-radius: 3px;
     flex-shrink: 0;
