@@ -354,6 +354,98 @@ main#tabs {
     font-size: 14px; /* Increased font size */
 }
 
+#newslettersub {
+    width: 267px;
+    height: 354px;
+    margin: 20px auto; /* Center newsletter section horizontally */
+    background-color: #ffffff;
+}
+
+#rectangle {
+    width: 267px;
+    height: 354px;
+    padding: 2px;
+    border-radius: 25px;
+    border: 1px solid rgba(121, 121, 121, 0);
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.35);
+    text-align: center;
+}
+
+#the-latest-gaming-ne {
+    width: 224px;
+    height: 54px;
+    margin: 10px auto;
+    font-family: "Poppins Bold", "Poppins", sans-serif;
+    font-weight: 700;
+    color: #333333;
+    line-height: normal;
+}
+
+#be-updated-with-the {
+    width: 224px;
+    height: 87px;
+    margin: 10px auto;
+    font-family: "Poppins Light", "Poppins", sans-serif;
+    font-weight: 300;
+    color: #333333;
+    text-align: center;
+    line-height: 1.5;
+}
+
+#input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+}
+
+#text-field {
+    width: 147px;
+    height: 34px;
+    padding: 2px;
+    border: 1px solid #797979;
+    background-color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    color: #999999;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+#text-field:disabled {
+    background-color: #f0f0f0;
+}
+
+#sign-up {
+    width: 69px;
+    height: 34px;
+    padding: 2px;
+    border: 1px solid rgba(121, 121, 121, 0);
+    background-color: #d9001b;
+    font-family: "Poppins", sans-serif;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+}
+
+#sign-up:hover {
+    background-color: #910012;
+}
+
+#by-submitting-your-i {
+    width: 225px;
+    height: 97px;
+    margin: 10px auto;
+    font-family: "Poppins Light", "Poppins", sans-serif;
+    font-weight: 300;
+    color: #aaaaaa;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 12px;
+}
+
 /* Footer */
 #footer-phone {
     position: sticky;
