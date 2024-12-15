@@ -16,83 +16,88 @@
         <div id="czugamer-cz">CZUgamer.cz</div>
     </div>
     <div id="menu-icon">
-    <img src="Pictures/menu.png" alt="CzuGamer Logo" />
+        <img src="Pictures/menu.png" alt="Menu Icon" />
     </div>
 </header>
 
 <!-- Tabs (Navigation Buttons) -->
 <div id="buttons">
-    <div id="recent-tab">Recent</div>
-    <div id="news-tab">News</div>
-    <div id="games-tab">Games</div>
-    <div id="reviews-tab">Reviews</div>
+    <button class="tab-button active" id="recent-tab">Recent</button>
+    <button class="tab-button" id="news-tab">News</button>
+    <button class="tab-button" id="games-tab">Games</button>
+    <button class="tab-button" id="reviews-tab">Reviews</button>
 </div>
 
 <main id="tabs">
-    <!-- 6 Items as before -->
-    <div id="item-1">
+    <!-- Item 1 -->
+    <div class="item">
         <div class="item-image">
-            <img src="https://picsum.photos/266/137?random=1" alt="Former CEO of Nokia concerned about ecology" />
+            <img src="https://picsum.photos/266/180?random=1" alt="Former CEO of Nokia concerned about ecology" />
         </div>
-        <div id="text-spot1">
-            <div id="former-ceo-of-nokia">Former CEO of Nokia concerned about ecology</div>
-            <div class="author-steve-jobs">by Steve Jobs</div>
-            <div class="news">News</div>
+        <div class="text-spot">
+            <div class="headline">Former CEO of Nokia concerned about ecology</div>
+            <div class="author">by Steve Jobs</div>
+            <div class="category">News</div>
             <div class="time">1 hour ago</div>
         </div>
     </div>
-    <div id="item-2">
+    <!-- Item 2 -->
+    <div class="item">
         <div class="item-image">
-            <img src="https://picsum.photos/266/137?random=2" alt="Game Game 2 - fresh release" />
+            <img src="https://picsum.photos/266/180?random=2" alt="Game Game 2 - fresh release" />
         </div>
-        <div id="text-spot2">
-            <div id="game-game-2----fresh">Game Game 2 - fresh release</div>
-            <div class="author-steve-jobs">by Steve Jobs</div>
-            <div class="games">Games</div>
+        <div class="text-spot">
+            <div class="headline">Game Game 2 - fresh release</div>
+            <div class="author">by Steve Jobs</div>
+            <div class="category">Games</div>
             <div class="time">2 hours ago</div>
         </div>
     </div>
-    <div id="item-3">
+    <!-- Item 3 -->
+    <div class="item">
         <div class="item-image">
-            <img src="https://picsum.photos/266/137?random=3" alt="Tesco Piwko Sim - fresh release" />
+            <img src="https://picsum.photos/266/180?random=3" alt="Tesco Piwko Sim - fresh release" />
         </div>
-        <div id="text-spot3">
-            <div id="tesco-piwko-sim---fr">Tesco Piwko Sim - fresh release</div>
-            <div class="author-steve-jobs">by Steve Jobs</div>
-            <div class="games">Games</div>
+        <div class="text-spot">
+            <div class="headline">Tesco Piwko Sim - fresh release</div>
+            <div class="author">by Steve Jobs</div>
+            <div class="category">Games</div>
             <div class="time">2 hours ago</div>
         </div>
     </div>
-    <div id="item-4">
+    <!-- Item 4 -->
+    <div class="item">
         <div class="item-image">
-            <img src="https://picsum.photos/266/147?random=4" alt="Cities Skylines - greatest city simulator of all times? Review" />
+            <img src="https://picsum.photos/266/180?random=4" alt="Cities Skylines - greatest city simulator of all times? Review" />
         </div>
-        <div id="text-spot4">
-            <div id="cities-skylines---gr">Cities Skylines - greatest city simulator of all times? Review</div>
-            <div class="author-steve-jobs">by Steve Jobs</div>
-            <div class="reviews">Reviews</div>
+        <div class="text-spot">
+            <div class="headline">Cities Skylines - greatest city simulator of all times? Review</div>
+            <div class="author">by Steve Jobs</div>
+            <div class="category">Reviews</div>
             <div class="time">5 hours ago</div>
         </div>
     </div>
-    <div id="item-5">
+    <!-- Item 5 -->
+    <div class="item">
         <div class="item-image">
-            <img src="https://picsum.photos/266/137?random=5" alt="Super Game - fresh release" />
+            <img src="https://picsum.photos/266/180?random=5" alt="Super Game - fresh release" />
         </div>
-        <div id="text-spot5">
-            <div id="super-game---fresh-r">Super Game - fresh release</div>
-            <div class="author-steve-jobs">by Steve Jobs</div>
-            <div class="games">Games</div>
+        <div class="text-spot">
+            <div class="headline">Super Game - fresh release</div>
+            <div class="author">by Steve Jobs</div>
+            <div class="category">Games</div>
             <div class="time">6 hours ago</div>
         </div>
     </div>
-    <div id="item-6">
+    <!-- Item 6 -->
+    <div class="item">
         <div class="item-image">
-            <img src="https://picsum.photos/266/137?random=6" alt="Is CD Projekt Red on a straight way to be closed?" />
+            <img src="https://picsum.photos/266/180?random=6" alt="Is CD Projekt Red on a straight way to be closed?" />
         </div>
-        <div id="text-spot6">
-            <div id="is-cd-projekt-red-on">Is CD Projekt Red on a straight way to be closed?</div>
-            <div class="author-steve-jobs">by Steve Jobs</div>
-            <div class="news">News</div>
+        <div class="text-spot">
+            <div class="headline">Is CD Projekt Red on a straight way to be closed?</div>
+            <div class="author">by Steve Jobs</div>
+            <div class="category">News</div>
             <div class="time">9 hours ago</div>
         </div>
     </div>
@@ -101,18 +106,32 @@
 <!-- Black Footer at bottom -->
 <footer id="footer-phone">
     <div id="footer">
-        <div id="newspaper-icon"></div>
+        <div id="newspaper-icon">
+            <img src="Pictures/newspaper.png" alt="Newspaper Icon" />
+        </div>
         <div class="footer-search">
             <input type="search" placeholder="Search..." aria-label="Search through site content" class="footer-search-input"/>
             <div id="search-icon">
-                <img src="Pictures/search.png"/>
+                <img src="Pictures/search.png" alt="Search Icon"/>
             </div>
         </div>
         <div id="profile-icon">
-            <img src="Pictures/profile.png">
+            <img src="Pictures/profile.png" alt="Profile Icon">
         </div>
     </div>
 </footer>
+
+<!-- Optional JavaScript to handle active tab -->
+<script>
+    const tabs = document.querySelectorAll('.tab-button');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            // Add functionality to display relevant content based on the active tab
+        });
+    });
+</script>
 
 </body>
 </html>
