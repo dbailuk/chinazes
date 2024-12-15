@@ -295,20 +295,21 @@ main#tabs {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end; /* Ensures elements align at the bottom */
     gap: 5px;
+    position: relative;
 }
 
 /* Headlines */
 .headline {
     width: 100%;
-    background-color: transparent;
     font-family: var(--font-bold);
     font-weight: 700;
     color: var(--text-color);
     text-align: left;
     line-height: 1.4;
-    font-size: 16px; /* Increased font size */
-    margin: 5px 0;
+    font-size: 16px;
+    margin-bottom: 8px; /* Adds spacing below the headline */
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -323,35 +324,36 @@ main#tabs {
 .author {
     width: auto;
     font-family: var(--font-extra-light);
-    font-weight: 300; /* Adjusted for better weight */
+    font-weight: 250; /* Lighter weight for author text */
     color: var(--main-color);
     text-align: left;
     line-height: normal;
-    font-size: 14px; /* Increased font size */
+    font-size: 14px;
+    margin-bottom: 20px; /* Adds spacing below the author text */
 }
 
 /* Category text (News, Games, Reviews) */
 .category {
-    width: auto;
-    background-color: transparent;
+    position: absolute; /* Positioned in the bottom-left corner */
+    bottom: 10px; /* Distance from the bottom */
+    left: 10px; /* Distance from the left */
     font-family: var(--font-medium);
-    font-weight: 500;
+    font-weight: bold; /* Make category text bold */
     color: var(--main-color);
     text-align: left;
-    line-height: normal;
-    font-size: 14px; /* Increased font size */
+    font-size: 14px;
 }
 
 /* Time text */
 .time {
-    width: auto;
-    background-color: transparent;
+    position: absolute; /* Positioned in the bottom-right corner */
+    bottom: 10px; /* Distance from the bottom */
+    right: 10px; /* Distance from the right */
     font-family: var(--font-medium);
     font-weight: 500;
     color: var(--light-grey);
-    text-align: left;
-    line-height: normal;
-    font-size: 14px; /* Increased font size */
+    text-align: right;
+    font-size: 14px;
 }
 
 #newslettersub {
