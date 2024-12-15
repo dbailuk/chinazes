@@ -48,10 +48,9 @@
     --light-grey: #aaaaaa;
     --border-color: #797979;
 
-    /* Sizing */
-    --border-radius: 33px; /* Updated to match button border-radius */
-    --button-height: 30px; /* Adjusted height for better usability */
-    --button-width: 80px; /* Adjusted width for better readability */
+    --border-radius: 33px;
+    --button-height: 30px;
+    --button-width: 80px;
 }
 
 html {
@@ -71,7 +70,6 @@ body {
     color: var(--color-text-primary);
     background-color: var(--color-bg-primary);
     line-height: 1.5;
-    /* Adjust padding-top to position secondary nav appropriately */
     padding-top: 90px;
 }
 
@@ -81,12 +79,10 @@ img {
     height: auto;
 }
 
-/* Credit card turns green on hover */
 .credit-card-icon:hover {
     filter: brightness(0) saturate(100%) invert(64%) sepia(63%) saturate(7326%) hue-rotate(85deg) brightness(91%) contrast(108%);
 }
 
-/* Account icon turns red on hover */
 .account-icon:hover {
     filter: brightness(0) saturate(100%) invert(20%) sepia(96%) saturate(7495%) hue-rotate(357deg) brightness(104%) contrast(112%);
 }
@@ -103,7 +99,6 @@ a {
     padding: 0 var(--spacing-sm);
 }
 
-/* Header and Navigation */
 header {
     background-color: var(--color-bg-secondary);
     color: var(--color-white);
@@ -200,7 +195,6 @@ nav[aria-label="Main navigation"] a:hover {
     display: block;
 }
 
-/* Secondary Navigation */
 .secondary-nav {
     background-color: var(--color-bg-highlight);
 }
@@ -233,7 +227,6 @@ nav[aria-label="Main navigation"] a:hover {
     font-size: var(--font-size-md);
 }
 
-/* Featured Section */
 .featured-section {
     margin: var(--spacing-xl) 0;
 }
@@ -270,7 +263,6 @@ nav[aria-label="Main navigation"] a:hover {
     padding: var(--spacing-sm);
 }
 
-/* Use aspect-ratio for images to be responsive */
 .featured-item img {
     aspect-ratio: 16/9;
     object-fit: cover;
@@ -296,7 +288,6 @@ nav[aria-label="Main navigation"] a:hover {
     font-size: var(--font-size-lg);
 }
 
-/* Content Grid */
 .content-grid {
     display: grid;
     gap: var(--spacing-md);
@@ -346,25 +337,6 @@ nav[aria-label="Main navigation"] a:hover {
     color: var(--color-gray-dark);
 }
 
-/* Latest Reviews */
-/*
-.latest-reviews {
-	margin-bottom: var(--spacing-xl);
-}
-
-.latest-reviews h2 {
-	font-size: var(--font-size-xxl);
-	font-weight: var(--font-weight-superbold);
-	margin-bottom: var(--spacing-md);
-}
-
-.latest-reviews article:hover p {
-	color: var(--color-red);
-	transition: color 0.3s ease;
-}
-*/
-
-/* Wrapper to position the image and overlay */
 .latest-reviews article {
     position: relative;
     overflow: hidden;
@@ -377,7 +349,6 @@ nav[aria-label="Main navigation"] a:hover {
     transition: transform 0.3s ease;
 }
 
-/* Pseudo-element for the overlay */
 .latest-reviews article::after {
     content: "";
     position: absolute;
@@ -391,7 +362,6 @@ nav[aria-label="Main navigation"] a:hover {
     pointer-events: none;
 }
 
-/* Text styling for visibility */
 .latest-reviews article p {
     position: absolute;
     bottom: 10px;
@@ -403,13 +373,12 @@ nav[aria-label="Main navigation"] a:hover {
     transition: color 0.3s ease;
 }
 
-/* Hover Effects */
 .latest-reviews article:hover::after {
-    opacity: 1; /* Show the black overlay */
+    opacity: 1;
 }
 
 .latest-reviews article:hover img {
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05);
 }
 
 .latest-reviews article:hover p {
@@ -465,16 +434,15 @@ nav[aria-label="Main navigation"] a:hover {
     padding: var(--spacing-xxs) var(--spacing-xs);
     font-weight: var(--font-weight-bold);
     border-radius: 4px;
-    z-index: 3; /* Higher than the overlay z-index */
+    z-index: 3;
 }
 
-/* Tabs and Article Listings */
 .tabs {
     display: flex;
     gap: var(--spacing-sm);
     margin-top: var(--spacing-lg);
     margin-bottom: var(--spacing-xs);
-    flex-wrap: wrap; /* allow wrap on smaller screens */
+    flex-wrap: wrap;
 }
 
 .tabs button {
@@ -514,24 +482,24 @@ nav[aria-label="Main navigation"] a:hover {
     display: flex;
     gap: var(--spacing-sm);
     margin-bottom: var(--spacing-md);
-    flex-wrap: wrap; /* allow reflow on smaller screens */
+    flex-wrap: wrap;
     transition: box-shadow 0.3s ease;
 }
 
 .article-link {
-    display: block; /* Makes the link behave like a block element */
-    text-decoration: none; /* Removes the underline */
-    color: inherit; /* Ensures the text color matches the design */
+    display: block;
+    text-decoration: none;
+    color: inherit;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .article-link:hover {
-    transform: translateY(-3px); /* Adds a slight lift effect */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .article-link:hover h4 {
-    color: var(--color-red); /* Title turns red on hover */
+    color: var(--color-red);
 }
 
 .article-listing img {
@@ -543,7 +511,7 @@ nav[aria-label="Main navigation"] a:hover {
 
 .article-listing-content {
     flex: 1;
-    min-width: 200px; /* ensure some width on small screens */
+    min-width: 200px;
 }
 
 .article-listing-content .category {
@@ -569,10 +537,9 @@ nav[aria-label="Main navigation"] a:hover {
     justify-content: space-between;
     color: var(--color-gray-medium);
     font-size: var(--font-size-sm);
-    flex-wrap: wrap; /* allow wrapping metadata on small screens */
+    flex-wrap: wrap;
 }
 
-/* Just Released Aside */
 .just-released-section {
     display: grid;
     gap: var(--spacing-md);
@@ -634,7 +601,7 @@ nav[aria-label="Main navigation"] a:hover {
     font-size: var(--font-size-sm);
 }
 
-/* Newsletter */
+
 .newsletter-section {
     background: var(--color-black);
     color: var(--color-white);
@@ -691,7 +658,6 @@ nav[aria-label="Main navigation"] a:hover {
     color: var(--color-gray-light);
 }
 
-/* Footer */
 .footer-top {
     background-color: var(--color-red); /* Red background */
     color: var(--color-white);
@@ -769,23 +735,20 @@ nav[aria-label="Main navigation"] a:hover {
     transform: scale(1.1);
 }
 
-/* By default, hide both versions */
 .mobile-version,
 .desktop-version {
     display: none;
 }
 
-/* Mobile Version (max-width: 768px) */
 @media (max-width: 768px) {
     .mobile-version {
-        display: block; /* Show mobile version */
+        display: block;
     }
 }
 
-/* Desktop Version (min-width: 769px) */
 @media (min-width: 769px) {
     .desktop-version {
-        display: block; /* Show desktop version */
+        display: block;
     }
 }
 
@@ -798,20 +761,16 @@ nav[aria-label="Main navigation"] a:hover {
     padding: 0;
 }
 
-/* Hide radio inputs */
 input[type="radio"][name="tabs"] {
     display: none;
 }
 
-
-/* Prevent horizontal scrolling */
 html, body {
     overflow-x: hidden;
     width: 100%;
     height: 100%;
 }
 
-/* Body as flexible layout */
 body {
     font-family: var(--font-family-base);
     background-color: #f5f5f5;
@@ -820,44 +779,39 @@ body {
     min-height: 100vh;
 }
 
-/* Prevent background scrolling when menu is open */
 .no-scroll {
     overflow: hidden;
 }
 
-/* Main content grows to push footer down if there's extra space */
 main#tabs {
     flex: 1;
     width: 100%;
-    /* center content inside if needed */
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow-y: auto;
 }
 
-/* Header */
 #header-phone {
     position: fixed;
     top: 0;
     z-index: 999;
     width: 100%;
-    height: 50px; /* Increased height for better spacing */
-    background-color: #000; /* black header */
+    height: 50px;
+    background-color: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 15px; /* Increased padding */
+    padding: 0 15px;
 }
 
-/* Left side (logo + site title) */
 .m-header-left {
     display: flex;
     align-items: center;
 }
 
 #header-image {
-    width: 30px; /* Increased size for better visibility */
+    width: 30px;
     height: 40px;
     display: flex;
     align-items: center;
@@ -872,21 +826,20 @@ main#tabs {
 
 #czugamer-cz {
     font-weight: var(--font-weight-bold);
-    font-size: 10px; /* Increased font size */
+    font-size: 10px;
     color: #ffffff;
-    margin-left: 5px; /* Increased gap */
+    margin-left: 5px;
     align-self: flex-end;
 }
 
-/* Menu icon on the right */
 #menu-icon {
-    width: 30px; /* Increased size */
+    width: 30px;
     height: 30px;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer; /* Indicate it's clickable */
+    cursor: pointer;
 }
 
 #menu-icon img {
@@ -894,34 +847,32 @@ main#tabs {
     height: 18px;
 }
 
-/* Dropdown Menu Styling */
 #menu {
-    position: absolute; /* Positioned below the header */
-    top: 50px; /* Align below the header */
-    left: 0; /* Full width */
-    width: 100%; /* Full width */
-    max-width: none; /* Remove max-width to cover entire screen */
-    background-color: #f2f2f2; /* Updated background color */
-    padding: 2px; /* Apply specified padding */
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    background-color: #f2f2f2;
+    padding: 2px;
     box-sizing: border-box;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 0 0 5px 5px; /* Rounded bottom corners */
-    overflow-y: auto; /* Adds scroll if content exceeds height */
-    z-index: 1000; /* Ensures the menu appears above other elements */
-    display: none; /* Hidden by default */
-    transition: max-height 0.3s ease-in-out; /* Smooth transition */
-    max-height: 0; /* Collapsed state */
+    border-radius: 0 0 5px 5px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
 }
 
 #menu.active {
     display: block;
-    max-height: 1000px; /* Expanded state */
+    max-height: 1000px;
 }
 
-/* Style the menu links */
 #menu a {
     display: block;
-    padding: 15px 20px; /* Uniform padding for consistent sizing */
+    padding: 15px 20px;
     text-decoration: none;
     color: #333333;
     font-family: "Poppins Medium", "Poppins", sans-serif;
@@ -929,34 +880,30 @@ main#tabs {
     text-align: left;
     line-height: normal;
     transition: background-color 0.2s, color 0.2s;
-    background-color: #f2f2f2; /* Set background to #f2f2f2 */
-    border-bottom: 1px solid #e0e0e0; /* Separator between links */
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-/* Remove border from the last link */
 #menu a:last-child {
     border-bottom: none;
 }
 
-/* Hover effect for menu links */
 #menu a:hover {
     background-color: #e0e0e0;
     color: #d9001b;
 }
 
-/* Responsive adjustments for the menu */
 @media (max-width: 400px) {
     #menu {
-        width: 100%; /* Full width on smaller screens */
+        width: 100%;
         left: 0;
-        border-radius: 0; /* Remove border-radius */
+        border-radius: 0;
     }
 }
 
-/* Buttons (Tabs) container: responsive width */
 #buttons {
     width: 100%;
-    max-width: 360px; /* Increased max-width for better spacing */
+    max-width: 360px;
     background-color: transparent;
     display: flex;
     gap: 10px;
@@ -967,38 +914,35 @@ main#tabs {
     white-space: nowrap;
 }
 
-
-/* Optional: Hide scrollbar for a cleaner look */
 #buttons::-webkit-scrollbar {
     display: none;
 }
 
 #buttons {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-/* Common button styles */
 .m-tab-button {
     flex: 0 0 auto;
-    min-width: var(--button-width); /* Ensures consistent minimum width */
+    min-width: var(--button-width);
     height: var(--button-height);
-    padding: 5px 10px; /* Adjusts padding for spacing */
+    padding: 5px 10px;
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     background-color: var(--main-color);
     font-weight: 500;
     color: #ffffff;
     text-align: center;
-    line-height: var(--button-height); /* Centers text vertically */
+    line-height: var(--button-height);
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
-    font-size: 14px; /* Adjust font size for readability */
-    white-space: nowrap; /* Prevents text from wrapping */
+    font-size: 14px;
+    white-space: nowrap;
 }
 
 .m-tab-button:hover {
-    background-color: #a50014; /* Darker shade on hover */
+    background-color: #a50014;
     color: #ffffff;
 }
 
@@ -1008,25 +952,23 @@ main#tabs {
     border: 1px solid var(--main-color);
 }
 
-/* Articles container */
 #tabs {
     width: 100%;
-    max-width: 360px; /* Increased max-width for consistency */
+    max-width: 360px;
     padding: 10px;
     background-color: transparent;
     margin: 0 auto;
 }
 
-/* Individual articles (6 total) */
 .m-tab-content {
     width: 100%;
 }
 .m-tab-content:target {
-    display: block; /* Display the targeted tab content */
+    display: block;
 }
 
 .m-tab-content.active {
-    display: block; /* Display active tab content */
+    display: block;
 }
 
 .m-item {
@@ -1041,10 +983,9 @@ main#tabs {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Article image container */
 .m-item-image {
     width: 100%;
-    height: 180px; /* Fixed height for consistency */
+    height: 180px;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     overflow: hidden;
     background-color: #ccc;
@@ -1056,7 +997,6 @@ main#tabs {
     object-fit: cover;
 }
 
-/* Text spot under image */
 .m-text-spot {
     width: 100%;
     background-color: #ffffff;
@@ -1064,12 +1004,11 @@ main#tabs {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Ensures elements align at the bottom */
+    justify-content: flex-end;
     gap: 5px;
     position: relative;
 }
 
-/* Headlines */
 .m-headline {
     width: 100%;
     font-weight: var(--font-weight-bold);
@@ -1077,7 +1016,7 @@ main#tabs {
     text-align: left;
     line-height: 1.4;
     font-size: 16px;
-    margin-bottom: 8px; /* Adds spacing below the headline */
+    margin-bottom: 8px;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -1088,7 +1027,6 @@ main#tabs {
     color: var(--main-color);
 }
 
-/* Author text */
 .m-author {
     width: auto;
     font-weight: var(--font-weight-superlight);
@@ -1096,25 +1034,23 @@ main#tabs {
     text-align: left;
     line-height: normal;
     font-size: 14px;
-    margin-bottom: 20px; /* Adds spacing below the author text */
+    margin-bottom: 20px;
 }
 
-/* Category text (News, Games, Reviews) */
 .m-category {
-    position: absolute; /* Positioned in the bottom-left corner */
-    bottom: 10px; /* Distance from the bottom */
-    left: 10px; /* Distance from the left */
-    font-weight: bold; /* Make category text bold */
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-weight: bold;
     color: var(--main-color);
     text-align: left;
     font-size: 14px;
 }
 
-/* Time text */
 .m-time {
-    position: absolute; /* Positioned in the bottom-right corner */
-    bottom: 10px; /* Distance from the bottom */
-    right: 10px; /* Distance from the right */
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
     font-weight: 500;
     color: var(--light-grey);
     text-align: right;
@@ -1125,7 +1061,7 @@ main#tabs {
     width: 100%;
     max-width: 360px;
     height: 354px;
-    margin: 20px auto; /* Center newsletter section horizontally */
+    margin: 20px auto;
     background-color: #ffffff;
     border-radius: 25px;
 }
@@ -1216,13 +1152,12 @@ main#tabs {
     font-size: 12px;
 }
 
-/* Footer */
 #footer-phone {
     position: sticky;
     bottom: 0;
     z-index: 999;
     width: 100%;
-    background-color: #000000; /* black footer background */
+    background-color: #000000;
     padding: 5px 0;
     display: flex;
     justify-content: center;
@@ -1233,19 +1168,19 @@ main#tabs {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ensures icons are at the edges */
+    justify-content: space-between;
     padding: 0 10px;
 }
 
 #newspaper-icon {
-    width: 50px; /* Increased size for better visibility */
+    width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 #profile-icon {
-    width: 50px; /* Increased size for better visibility */
+    width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -1253,12 +1188,12 @@ main#tabs {
 }
 
 #newspaper-icon img {
-    width: 30px; /* Scaled up icon */
+    width: 30px;
     height: 30px;
     object-fit: contain;
 }
 #profile-icon img {
-    width: 30px; /* Scaled up icon */
+    width: 30px;
     height: 30px;
     object-fit: contain;
 }
@@ -1266,14 +1201,14 @@ main#tabs {
 .m-footer-search {
     display: flex;
     align-items: center;
-    position: relative; /* Enable relative positioning for the container */
+    position: relative;
     background-color: #ffffff;
     border-radius: 5px;
     padding: 5px 10px;
     max-width: 200px;
-    flex-shrink: 0; /* Prevent the search bar from shrinking */
+    flex-shrink: 0;
     min-width: 100px;
-    margin: 0; /* Remove any extra margins */
+    margin: 0;
 }
 
 .footer-search-input {
@@ -1281,7 +1216,7 @@ main#tabs {
     border: none;
     outline: none;
     font-size: 14px;
-    padding: 2px 5px; /* Add padding to separate input text from icon */
+    padding: 2px 5px;
     color: #333;
     background-color: transparent;
     margin-right: 25px;
@@ -1308,28 +1243,26 @@ main#tabs {
 
 @media (max-width: 400px) {
     #footer {
-        flex-wrap: wrap; /* Allow elements to stack if necessary */
-        justify-content: center; /* Center-align elements */
+        flex-wrap: wrap;
+        justify-content: center;
         padding: 10px;
     }
 
     #newspaper-icon, #profile-icon {
-        width: 40px; /* Reduce icon sizes for small screens */
+        width: 40px;
         height: 40px;
     }
 
     .m-footer-search {
-        max-width: 150px; /* Constrain width further on smaller screens */
-        margin: 10px auto; /* Center search bar when wrapped */
+        max-width: 150px;
+        margin: 10px auto;
     }
 }
 
-/* Hide the radio inputs */
 #buttons input[type="radio"] {
     display: none;
 }
 
-/* Style the labels as buttons */
 #buttons label.m-tab-button {
     cursor: pointer;
     background-color: var(--main-color);
@@ -1344,31 +1277,26 @@ main#tabs {
     font-size: 14px;
 }
 
-/* Ensure labels look like buttons */
 #buttons label.m-tab-button {
     display: inline-block;
 }
 
-/* Active tab styling */
 #buttons input[type="radio"]:checked + label.m-tab-button {
     background-color: var(--main-color);
     color: #ffffff;
     border: 1px solid var(--main-color);
 }
 
-/* Hover effect for labels */
 #buttons label.m-tab-button:hover {
-    background-color: #a50014; /* Darker shade on hover */
+    background-color: #a50014;
     color: #ffffff;
 }
 
-/* Hide all tab contents by default */
 .m-tab-content {
     display: none;
     animation: fadeIn 0.5s;
 }
 
-/* Show the content when the corresponding radio is checked */
 #recent-tab:checked ~ #tabs #recent-content,
 #news-tab:checked ~ #tabs #news-content,
 #games-tab:checked ~ #tabs #games-content,
@@ -1380,7 +1308,6 @@ main#tabs {
     align-items: center;
 }
 
-/* Optional: Fade-in animation */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
