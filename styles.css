@@ -69,6 +69,16 @@ img {
 	height: auto;
 }
 
+/* Credit card turns green on hover */
+.credit-card-icon:hover {
+	filter: brightness(0) saturate(100%) invert(64%) sepia(63%) saturate(7326%) hue-rotate(85deg) brightness(91%) contrast(108%);
+}
+
+/* Account icon turns red on hover */
+.account-icon:hover {
+	filter: brightness(0) saturate(100%) invert(20%) sepia(96%) saturate(7495%) hue-rotate(357deg) brightness(104%) contrast(112%);
+}
+
 a {
 	text-decoration: none;
 	color: inherit;
@@ -133,6 +143,13 @@ nav[aria-label="Main navigation"] a {
 	margin: 0 var(--spacing-xxl);
 }
 
+nav[aria-label="Main navigation"] a:hover {
+	font-weight: var(--font-weight-normal);
+	font-size: var(--font-size-lg);
+	margin: 0 var(--spacing-xxl);
+	color: var(--color-red);
+}
+
 .header-icons {
 	display: flex;
 	align-items: center;
@@ -187,6 +204,13 @@ nav[aria-label="Main navigation"] a {
 
 .secondary-nav a {
 	color: var(--color-white);
+	font-size: var(--font-size-md);
+	font-weight: var(--font-weight-superlight);
+	letter-spacing: normal;
+}
+
+.secondary-nav a:hover {
+	color: var(--color-gray-medium);
 	font-size: var(--font-size-md);
 	font-weight: var(--font-weight-superlight);
 	letter-spacing: normal;
@@ -286,6 +310,14 @@ nav[aria-label="Main navigation"] a {
 	flex-direction: column;
 }
 
+.content-grid article:hover {
+	border: 1px solid var(--color-gray-light);
+	padding: var(--spacing-sm);
+	display: flex;
+	flex-direction: column;
+	color: var(--color-red)
+}
+
 .content-grid article img {
 	aspect-ratio: 4/3;
 	object-fit: cover;
@@ -303,6 +335,7 @@ nav[aria-label="Main navigation"] a {
 }
 
 /* Latest Reviews */
+/*
 .latest-reviews {
 	margin-bottom: var(--spacing-xl);
 }
@@ -313,7 +346,70 @@ nav[aria-label="Main navigation"] a {
 	margin-bottom: var(--spacing-md);
 }
 
+.latest-reviews article:hover p {
+	color: var(--color-red);
+	transition: color 0.3s ease;
+}
+*/
+
+/* Wrapper to position the image and overlay */
+.latest-reviews article {
+	position: relative;
+	overflow: hidden;
+}
+
+.latest-reviews article img {
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: transform 0.3s ease;
+}
+
+/* Pseudo-element for the overlay */
+.latest-reviews article::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 25%;
+	background: rgba(0, 0, 0, 0.6);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+}
+
+/* Text styling for visibility */
+.latest-reviews article p {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	margin: 0;
+	color: var(--color-white);
+	font-size: 1rem;
+	z-index: 2;
+	transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.latest-reviews article:hover::after {
+	opacity: 1; /* Show the black overlay */
+}
+
+.latest-reviews article:hover img {
+	transform: scale(1.05); /* Slight zoom effect */
+}
+
+.latest-reviews article:hover p {
+	color: var(--color-red);
+}
+
 .review-grid {
+	display: grid;
+	gap: var(--spacing-md);
+}
+
+.review-grid:hover {
 	display: grid;
 	gap: var(--spacing-md);
 }
@@ -357,6 +453,7 @@ nav[aria-label="Main navigation"] a {
 	padding: var(--spacing-xxs) var(--spacing-xs);
 	font-weight: var(--font-weight-bold);
 	border-radius: 4px;
+	z-index: 3; /* Higher than the overlay z-index */
 }
 
 /* Tabs and Article Listings */
@@ -369,6 +466,7 @@ nav[aria-label="Main navigation"] a {
 }
 
 .tabs button {
+	font-family: var(--font-family-base);
 	background: var(--color-red);
 	border: none;
 	color: var(--color-white);
@@ -405,6 +503,23 @@ nav[aria-label="Main navigation"] a {
 	gap: var(--spacing-sm);
 	margin-bottom: var(--spacing-md);
 	flex-wrap: wrap; /* allow reflow on smaller screens */
+	transition: box-shadow 0.3s ease;
+}
+
+.article-link {
+	display: block; /* Makes the link behave like a block element */
+	text-decoration: none; /* Removes the underline */
+	color: inherit; /* Ensures the text color matches the design */
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.article-link:hover {
+	transform: translateY(-3px); /* Adds a slight lift effect */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.article-link:hover h4 {
+	color: var(--color-red); /* Title turns red on hover */
 }
 
 .article-listing img {
@@ -585,8 +700,12 @@ nav[aria-label="Main navigation"] a {
 
 .footer-top nav a {
 	color: var(--color-white);
-	font-size: var(--font-size-sm);
+	font-size: var(--font-size-md);
 	font-weight: var(--font-weight-light)
+}
+
+.footer-top nav a:hover {
+	color: var(--color-gray-medium);
 }
 
 .footer-top .social-links {
