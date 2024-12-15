@@ -98,7 +98,6 @@ main#tabs {
 #menu-icon {
     width: 30px; /* Increased size */
     height: 30px;
-    background-color: var(--main-color);
     border-radius: 5px;
     display: flex;
     align-items: center;
