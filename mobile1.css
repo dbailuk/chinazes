@@ -78,7 +78,7 @@ main#tabs {
 }
 
 #header-image {
-    width: 40px; /* Increased size for better visibility */
+    width: 30px; /* Increased size for better visibility */
     height: 40px;
     display: flex;
     align-items: center;
@@ -89,14 +89,15 @@ main#tabs {
     width: auto;
     height: 100%;
     object-fit: contain;
-    border-radius: 50%;
 }
 
 #czugamer-cz {
     font-family: var(--font-bold);
-    font-size: 16px; /* Increased font size */
+    font-size: 10px; /* Increased font size */
     color: #ffffff;
-    margin-left: 10px; /* Increased gap */
+    margin-left: 5px; /* Increased gap */
+    align-self: flex-end;
+
 }
 
 /* Menu icon on the right */
