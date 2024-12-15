@@ -18,6 +18,7 @@
     --button-width: 80px; /* Adjusted width for better readability */
 }
 
+/* Reset */
 *,
 *::before,
 *::after {
@@ -45,6 +46,11 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: var(--font-regular);
+}
+
+/* Prevent background scrolling when menu is open */
+.no-scroll {
+    overflow: hidden;
 }
 
 /* Main content grows to push footer down if there's extra space */
@@ -97,7 +103,6 @@ main#tabs {
     color: #ffffff;
     margin-left: 5px; /* Increased gap */
     align-self: flex-end;
-
 }
 
 /* Menu icon on the right */
@@ -118,29 +123,32 @@ main#tabs {
 
 /* Dropdown Menu Styling */
 #menu {
-    position: absolute; /* Positions the menu relative to the nearest positioned ancestor */
-    top: 50px; /* Adjust based on header height */
-    right: 15px; /* Aligns the menu to the right side */
-    width: 320px;
-    height: 586px;
-    background-color: #ffffff;
-    padding: 2px;
+    position: absolute; /* Positioned below the header */
+    top: 50px; /* Align below the header */
+    left: 0; /* Full width */
+    width: 100%; /* Full width */
+    max-width: none; /* Remove max-width to cover entire screen */
+    background-color: #f2f2f2; /* Updated background color */
+    padding: 2px; /* Apply specified padding */
     box-sizing: border-box;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px; /* Rounded bottom corners */
     overflow-y: auto; /* Adds scroll if content exceeds height */
     z-index: 1000; /* Ensures the menu appears above other elements */
     display: none; /* Hidden by default */
+    transition: max-height 0.3s ease-in-out; /* Smooth transition */
+    max-height: 0; /* Collapsed state */
 }
 
 #menu.active {
     display: block;
+    max-height: 1000px; /* Expanded state */
 }
 
 /* Style the menu links */
 #menu a {
     display: block;
-    padding: 15px 20px;
+    padding: 15px 20px; /* Uniform padding for consistent sizing */
     text-decoration: none;
     color: #333333;
     font-family: "Poppins Medium", "Poppins", sans-serif;
@@ -148,21 +156,27 @@ main#tabs {
     text-align: left;
     line-height: normal;
     transition: background-color 0.2s, color 0.2s;
+    background-color: #f2f2f2; /* Set background to #f2f2f2 */
+    border-bottom: 1px solid #e0e0e0; /* Separator between links */
+}
+
+/* Remove border from the last link */
+#menu a:last-child {
+    border-bottom: none;
 }
 
 /* Hover effect for menu links */
 #menu a:hover {
-    background-color: #f0f0f0;
+    background-color: #e0e0e0;
     color: #d9001b;
 }
 
 /* Responsive adjustments for the menu */
 @media (max-width: 400px) {
     #menu {
-        width: 100%;
-        right: 0;
+        width: 100%; /* Full width on smaller screens */
         left: 0;
-        border-radius: 0;
+        border-radius: 0; /* Remove border-radius */
     }
 }
 
@@ -397,7 +411,7 @@ main#tabs {
     height: 12px;
 }
 
-/* New CSS for Tabs */
+/* Tabs Styling */
 
 /* Hide the radio inputs */
 #buttons input[type="radio"] {
@@ -420,9 +434,8 @@ main#tabs {
     font-size: 14px;
 }
 
-/* Remove default label styles */
+/* Ensure labels look like buttons */
 #buttons label.tab-button {
-    /* Ensure labels look like buttons */
     display: inline-block;
 }
 
