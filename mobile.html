@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<!-- Header -->
 <header id="header-phone">
     <div class="header-left">
         <div id="header-image">
@@ -20,90 +21,329 @@
     </div>
 </header>
 
-<!-- Tabs (Navigation Buttons) -->
+<!-- Radio Inputs (Hidden) -->
+<!-- These need to be placed before the buttons and tabs for CSS sibling selectors to work correctly -->
+<input type="radio" name="tabs" id="recent-tab" checked>
+<input type="radio" name="tabs" id="news-tab">
+<input type="radio" name="tabs" id="games-tab">
+<input type="radio" name="tabs" id="reviews-tab">
+
+<!-- Tabs (Labels Styled as Buttons) -->
 <div id="buttons">
-    <button class="tab-button active" id="recent-tab">Recent</button>
-    <button class="tab-button" id="news-tab">News</button>
-    <button class="tab-button" id="games-tab">Games</button>
-    <button class="tab-button" id="reviews-tab">Reviews</button>
+    <label class="tab-button" for="recent-tab">Recent</label>
+    <label class="tab-button" for="news-tab">News</label>
+    <label class="tab-button" for="games-tab">Games</label>
+    <label class="tab-button" for="reviews-tab">Reviews</label>
 </div>
 
+<!-- Main Content Area -->
 <main id="tabs">
-    <!-- Item 1 -->
-    <div class="item">
-        <div class="item-image">
-            <img src="https://picsum.photos/266/180?random=1" alt="Former CEO of Nokia concerned about ecology" />
+    <!-- Recent Tab Content -->
+    <div class="tab-content" id="recent-content">
+        <!-- Article 1 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=1" alt="Former CEO of Nokia concerned about ecology" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Former CEO of Nokia concerned about ecology</div>
+                <div class="author">by Steve Jobs</div>
+                <div class="category">News</div>
+                <div class="time">1 hour ago</div>
+            </div>
         </div>
-        <div class="text-spot">
-            <div class="headline">Former CEO of Nokia concerned about ecology</div>
-            <div class="author">by Steve Jobs</div>
-            <div class="category">News</div>
-            <div class="time">1 hour ago</div>
+        <!-- Article 2 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=2" alt="Game Game 2 - fresh release" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Game Game 2 - fresh release</div>
+                <div class="author">by Jane Doe</div>
+                <div class="category">Games</div>
+                <div class="time">2 hours ago</div>
+            </div>
+        </div>
+        <!-- Article 3 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=3" alt="Tesco Piwko Sim - fresh release" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Tesco Piwko Sim - fresh release</div>
+                <div class="author">by John Smith</div>
+                <div class="category">Games</div>
+                <div class="time">2 hours ago</div>
+            </div>
+        </div>
+        <!-- Article 4 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=4" alt="Cities Skylines - greatest city simulator of all times? Review" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Cities Skylines - greatest city simulator of all times? Review</div>
+                <div class="author">by Emily Clark</div>
+                <div class="category">Reviews</div>
+                <div class="time">5 hours ago</div>
+            </div>
+        </div>
+        <!-- Article 5 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=5" alt="Super Game - fresh release" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Super Game - fresh release</div>
+                <div class="author">by Michael Brown</div>
+                <div class="category">Games</div>
+                <div class="time">6 hours ago</div>
+            </div>
+        </div>
+        <!-- Article 6 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=6" alt="Is CD Projekt Red on a straight way to be closed?" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Is CD Projekt Red on a straight way to be closed?</div>
+                <div class="author">by Sarah Johnson</div>
+                <div class="category">News</div>
+                <div class="time">9 hours ago</div>
+            </div>
         </div>
     </div>
-    <!-- Item 2 -->
-    <div class="item">
-        <div class="item-image">
-            <img src="https://picsum.photos/266/180?random=2" alt="Game Game 2 - fresh release" />
+
+    <!-- News Tab Content -->
+    <div class="tab-content" id="news-content">
+        <!-- Article 1 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=7" alt="New Gaming Console Released" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">New Gaming Console Released</div>
+                <div class="author">by Alex Turner</div>
+                <div class="category">News</div>
+                <div class="time">30 minutes ago</div>
+            </div>
         </div>
-        <div class="text-spot">
-            <div class="headline">Game Game 2 - fresh release</div>
-            <div class="author">by Steve Jobs</div>
-            <div class="category">Games</div>
-            <div class="time">2 hours ago</div>
+        <!-- Article 2 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=8" alt="E-sports Championship Announced" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">E-sports Championship Announced</div>
+                <div class="author">by Linda White</div>
+                <div class="category">News</div>
+                <div class="time">1 hour ago</div>
+            </div>
+        </div>
+        <!-- Article 3 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=9" alt="Tech Giant Acquires Indie Game Studio" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Tech Giant Acquires Indie Game Studio</div>
+                <div class="author">by Robert Green</div>
+                <div class="category">News</div>
+                <div class="time">2 hours ago</div>
+            </div>
+        </div>
+        <!-- Article 4 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=10" alt="Upcoming Game Expo Highlights" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Upcoming Game Expo Highlights</div>
+                <div class="author">by Karen Black</div>
+                <div class="category">News</div>
+                <div class="time">3 hours ago</div>
+            </div>
+        </div>
+        <!-- Article 5 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=11" alt="Virtual Reality Trends in 2024" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Virtual Reality Trends in 2024</div>
+                <div class="author">by Tom Harris</div>
+                <div class="category">News</div>
+                <div class="time">4 hours ago</div>
+            </div>
+        </div>
+        <!-- Article 6 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=12" alt="Mobile Gaming Growth Statistics" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Mobile Gaming Growth Statistics</div>
+                <div class="author">by Nancy Lee</div>
+                <div class="category">News</div>
+                <div class="time">5 hours ago</div>
+            </div>
         </div>
     </div>
-    <!-- Item 3 -->
-    <div class="item">
-        <div class="item-image">
-            <img src="https://picsum.photos/266/180?random=3" alt="Tesco Piwko Sim - fresh release" />
+
+    <!-- Games Tab Content -->
+    <div class="tab-content" id="games-content">
+        <!-- Article 1 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=13" alt="Adventure Quest - New Expansion" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Adventure Quest - New Expansion</div>
+                <div class="author">by Sam Wilson</div>
+                <div class="category">Games</div>
+                <div class="time">1 hour ago</div>
+            </div>
         </div>
-        <div class="text-spot">
-            <div class="headline">Tesco Piwko Sim - fresh release</div>
-            <div class="author">by Steve Jobs</div>
-            <div class="category">Games</div>
-            <div class="time">2 hours ago</div>
+        <!-- Article 2 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=14" alt="Space Invaders Reboot Announced" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Space Invaders Reboot Announced</div>
+                <div class="author">by Laura Adams</div>
+                <div class="category">Games</div>
+                <div class="time">2 hours ago</div>
+            </div>
+        </div>
+        <!-- Article 3 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=15" alt="Racing Legends - Beta Testing" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Racing Legends - Beta Testing</div>
+                <div class="author">by Kevin Martinez</div>
+                <div class="category">Games</div>
+                <div class="time">3 hours ago</div>
+            </div>
+        </div>
+        <!-- Article 4 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=16" alt="Fantasy World - Character Customization" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Fantasy World - Character Customization</div>
+                <div class="author">by Megan Taylor</div>
+                <div class="category">Games</div>
+                <div class="time">4 hours ago</div>
+            </div>
+        </div>
+        <!-- Article 5 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=17" alt="Puzzle Mania - New Levels Released" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Puzzle Mania - New Levels Released</div>
+                <div class="author">by Brian Lee</div>
+                <div class="category">Games</div>
+                <div class="time">5 hours ago</div>
+            </div>
+        </div>
+        <!-- Article 6 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=18" alt="Strategy Masters - Multiplayer Mode" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Strategy Masters - Multiplayer Mode</div>
+                <div class="author">by Olivia King</div>
+                <div class="category">Games</div>
+                <div class="time">6 hours ago</div>
+            </div>
         </div>
     </div>
-    <!-- Item 4 -->
-    <div class="item">
-        <div class="item-image">
-            <img src="https://picsum.photos/266/180?random=4" alt="Cities Skylines - greatest city simulator of all times? Review" />
+
+    <!-- Reviews Tab Content -->
+    <div class="tab-content" id="reviews-content">
+        <!-- Article 1 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=19" alt="Battlefield 2042 - An In-Depth Review" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Battlefield 2042 - An In-Depth Review</div>
+                <div class="author">by Daniel Scott</div>
+                <div class="category">Reviews</div>
+                <div class="time">2 hours ago</div>
+            </div>
         </div>
-        <div class="text-spot">
-            <div class="headline">Cities Skylines - greatest city simulator of all times? Review</div>
-            <div class="author">by Steve Jobs</div>
-            <div class="category">Reviews</div>
-            <div class="time">5 hours ago</div>
+        <!-- Article 2 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=20" alt="Mystic Lands - Gameplay Analysis" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Mystic Lands - Gameplay Analysis</div>
+                <div class="author">by Sophia Turner</div>
+                <div class="category">Reviews</div>
+                <div class="time">3 hours ago</div>
+            </div>
         </div>
-    </div>
-    <!-- Item 5 -->
-    <div class="item">
-        <div class="item-image">
-            <img src="https://picsum.photos/266/180?random=5" alt="Super Game - fresh release" />
+        <!-- Article 3 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=21" alt="Cyber Runner - Graphics and Performance" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Cyber Runner - Graphics and Performance</div>
+                <div class="author">by Ethan Brown</div>
+                <div class="category">Reviews</div>
+                <div class="time">4 hours ago</div>
+            </div>
         </div>
-        <div class="text-spot">
-            <div class="headline">Super Game - fresh release</div>
-            <div class="author">by Steve Jobs</div>
-            <div class="category">Games</div>
-            <div class="time">6 hours ago</div>
+        <!-- Article 4 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=22" alt="Hero's Journey - Storyline Evaluation" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Hero's Journey - Storyline Evaluation</div>
+                <div class="author">by Ava Wilson</div>
+                <div class="category">Reviews</div>
+                <div class="time">5 hours ago</div>
+            </div>
         </div>
-    </div>
-    <!-- Item 6 -->
-    <div class="item">
-        <div class="item-image">
-            <img src="https://picsum.photos/266/180?random=6" alt="Is CD Projekt Red on a straight way to be closed?" />
+        <!-- Article 5 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=23" alt="Puzzle Quest - Difficulty Levels Reviewed" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">Puzzle Quest - Difficulty Levels Reviewed</div>
+                <div class="author">by Mason Davis</div>
+                <div class="category">Reviews</div>
+                <div class="time">6 hours ago</div>
+            </div>
         </div>
-        <div class="text-spot">
-            <div class="headline">Is CD Projekt Red on a straight way to be closed?</div>
-            <div class="author">by Steve Jobs</div>
-            <div class="category">News</div>
-            <div class="time">9 hours ago</div>
+        <!-- Article 6 -->
+        <div class="item">
+            <div class="item-image">
+                <img src="https://picsum.photos/266/180?random=24" alt="RPG Legends - Character Development" />
+            </div>
+            <div class="text-spot">
+                <div class="headline">RPG Legends - Character Development</div>
+                <div class="author">by Isabella Moore</div>
+                <div class="category">Reviews</div>
+                <div class="time">7 hours ago</div>
+            </div>
         </div>
     </div>
 </main>
 
-<!-- Black Footer at bottom -->
+<!-- Footer -->
 <footer id="footer-phone">
     <div id="footer">
         <div id="newspaper-icon">
@@ -120,18 +360,6 @@
         </div>
     </div>
 </footer>
-
-<!-- Optional JavaScript to handle active tab -->
-<script>
-    const tabs = document.querySelectorAll('.tab-button');
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            // Add functionality to display relevant content based on the active tab
-        });
-    });
-</script>
 
 </body>
 </html>
