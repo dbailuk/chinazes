@@ -926,19 +926,6 @@ main#tabs {
 .m-tab-button {
     flex: 0 0 auto;
     min-width: var(--button-width);
-    height: var(--button-height);
-    padding: 5px 10px;
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
-    background-color: var(--main-color);
-    font-weight: 500;
-    color: #ffffff;
-    text-align: center;
-    line-height: var(--button-height);
-    cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
-    font-size: 14px;
-    white-space: nowrap;
 }
 
 .m-tab-button:hover {
@@ -947,8 +934,7 @@ main#tabs {
 }
 
 .m-tab-button.active {
-    background-color: var(--main-color);
-    color: #ffffff;
+    background-color: var(--color-red);
     border: 1px solid var(--main-color);
 }
 
@@ -1092,7 +1078,7 @@ main#tabs {
 #be-updated-with-the {
     width: 224px;
     height: 87px;
-    margin: 10px auto;
+    margin: 33px auto;
     font-family: "Poppins Light", "Poppins", sans-serif;
     font-weight: 300;
     color: #333333;
@@ -1265,8 +1251,8 @@ main#tabs {
 
 #buttons label.m-tab-button {
     cursor: pointer;
-    background-color: var(--main-color);
-    color: #ffffff;
+    background-color: transparent;
+    color: var(--color-black);
     padding: 5px 10px;
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
@@ -1274,7 +1260,7 @@ main#tabs {
     text-align: center;
     line-height: normal;
     transition: background-color 0.2s, color 0.2s;
-    font-size: 14px;
+    font-size: var(--font-size-sm);
 }
 
 #buttons label.m-tab-button {
@@ -1282,13 +1268,20 @@ main#tabs {
 }
 
 #buttons input[type="radio"]:checked + label.m-tab-button {
-    background-color: var(--main-color);
-    color: #ffffff;
-    border: 1px solid var(--main-color);
+    background-color: var(--color-red);
 }
 
 #buttons label.m-tab-button:hover {
-    background-color: #a50014;
+    background-color: var(--color-red);
+}
+
+#recent-tab:checked ~ #buttons label[for="recent-tab"],
+#news-tab:checked ~ #buttons label[for="news-tab"],
+#games-tab:checked ~ #buttons label[for="games-tab"],
+#reviews-tab:checked ~ #buttons label[for="reviews-tab"],
+#technology-tab:checked ~ #buttons label[for="technology-tab"],
+#events-tab:checked ~ #buttons label[for="events-tab"] {
+    background-color: var(--color-red);
     color: #ffffff;
 }
 
